@@ -76,43 +76,64 @@
 							<h2>Protocols</h2>
 						</header>
 						<section>
+							<p>The following protocol summaries are for the generation of paired-end sequencing reads of 16S or 18S PCR amplicons with multiple barcodes (ie: "indices") on the Illumina MiSeq 
+							machine of length approx. 400-500 bp (300+300 bp with ~100 bp overlap). It assumes an input of 96 individual samples but can be scaled down or up (to 384) as appropriate. These protocols 
+							are a synthesis of multiple sources in the current scientific literature, but draws heavily upon the following four sources:
+							<ul class="default">
+								<li><b>Comeau AM, Li WK, Tremblay JE, Carmack EC, Lovejoy C.</b> 2011. Arctic Ocean microbial community structure before and after the 2007 record sea ice minimum. <i>PLoS ONE</i>, 6:e27492. PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/22096583" target="new">22096583</a>. [<font style="color: red;">primer design/sequences and PCR set-up</font>]
+								<li><b>Fadrosh DW, Ma B, Gajer P, Sengamalay N, Ott S, Brotman RM, Ravel J.</b> 2014. An improved dual-indexing approach for multiplexed 16S rRNA gene sequencing on the Illumina MiSeq platform. <i>Microbiome</i>, 2:6. PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/24558975" target="new">24558975</a>. [<font style="color: red;">Illumina indexing set-up and post-PCR treatment</font>]
+								<li><b>Earth Microbiome Project (EMP)</b> at <a href="http://www.earthmicrobiome.org/emp-standard-protocols/" target="new">www.earthmicrobiome.org/emp-standard-protocols/</a> [<font style="color: red;">blocking protocol for eukaryote contaminants</font>]
+								<li><b>Human Microbiome Project (HMP)</b> at <a href="http://hmpdacc.org/resources/tools_protocols.php" target="new">hmpdacc.org/resources/tools_protocols.php</a> [<font style="color: red;">general considerations/extraction for stool samples</font>]
+							</ul>
+
+						</section>
+						<section>
 							<header>
 								<a name="collect"></a><h3>Sample Collection</h3>
 							</header>
-							<p>
-								Info coming soon!
+							<p>Info coming soon!
 							</p>
 						</section>
 						<section>
 							<header>
 								<a name="extract"></a><h3>DNA/RNA Extraction</h3>
 							</header>
-							<p>
-								Info coming soon!
+							<p>DNA/RNA is extracted from the samples using the method/kit appropriate to the specific samples - this may also be a choice you make for your personal samples since you have experience 
+							with them, or you may wish to follow our choice extraction methods. As there is no general consensus in the literature on choice of kits, other than to say all of them affect the 
+							final profiles to some degree and that bead-beating is most probably a must for difficult materials (and/or with much Gram+ves and protist cysts), we are currently evaluating the 
+							<b>MO BIO PowerFecal DNA Kit</b> for use with mouse pellets and human fecal samples. We are also testing various DNA kits for use with human urine. We have not yet ventured into 
+							RNA kits for metatranscriptomes, but this is something that we will be examining in the near future. Quantification and quality-checks are done (via NanoDrop or PicoGreen/Qubit) to 
+							verify success. <i>Optional: A gel can be run to verify integrity (generally unnecessary for PCR-only studies, but required for shotgun metagenomic sequencing).</i>
 							</p>
 						</section>
 						<section>
 							<header>
 								<a name="library"></a><h3>Library Preparation</h3>
 							</header>
-							<p>
-								Info coming soon!
-							</p>
 						</section>
 						<section>
 							<header>
 								<a name="lib16S"></a><h3><i>&rarr; 16S Amplicons</i></h3>
 							</header>
-							<p>
-								Info coming soon!
+							<p>16S fragments are PCR-amplified from the DNA in duplicate or triplicate using 2/3 separate template dilutions (generally 1:1, 1:2, 1:10) using the high-fidelity <b>Phusion</b> 
+							polymerase. A single round of PCR is done using "fusion primers" (Illumina adaptors + indices + specific regions) targeting the V6/V7/V8 region (438 bp usable sequence) with 
+							multiplexing which allows between 96 and 384 samples to be run. PCR products are verified visually by running a high-throughput <b>Invitrogen 96-well E-gel</b>. Any samples with 
+							failed PCRs (or spurious bands) are re-amplified by optimizing PCR conditions to produce correct bands in order to complete the sample plate before continuing. The triplicate PCR 
+							reactions are pooled in one plate, then cleaned-up and normalized using the high-throughput <b>Invitrogen SequalPrep 96-well Plate Kit</b>. The 96 to 384 samples are then pooled to 
+							make one library which is then quantified and quality-checked as above before sequencing.
 							</p>
 						</section>
 						<section>
 							<header>
 								<a name="lib18S"></a><h3><i>&rarr; 18S Amplicons</i></h3>
 							</header>
-							<p>
-								Info coming soon!
+							<p>18S fragments are PCR-amplified from the DNA in duplicate or triplicate using 2/3 separate template dilutions (generally 1:1, 1:2, 1:10) using the high-fidelity <b>Phusion</b> 
+							polymerase. A single round of PCR is done using "fusion primers" (Illumina adaptors + indices + specific regions) targeting the V4 region (variable size, avg. 580 bp) with 
+							multiplexing which allows between 96 and 384 samples to be run. In cases where human or mouse 18S DNA contamination will be of great concern, a <b>mammalian blocking primer</b> is 
+							used following the protocol from the EMP listed above. PCR products are verified visually by running a high-throughput <b>Invitrogen 96-well E-gel</b>. Any samples with 
+							failed PCRs (or spurious bands) are re-amplified by optimizing PCR conditions to produce correct bands in order to complete the sample plate before continuing. The triplicate PCR 
+							reactions are pooled in one plate, then cleaned-up and normalized using the high-throughput <b>Invitrogen SequalPrep 96-well Plate Kit</b>. The 96 to 384 samples are then pooled to 
+							make one library which is then quantified and quality-checked as above before sequencing.
 							</p>
 						</section>
 						<section>
@@ -136,7 +157,10 @@
 								<a name="NGS"></a><h3>Next-Generation Sequencing</h3>
 							</header>
 							<p>
-								Info coming soon!
+								Amplicon samples, small meta-genomic/-transcriptomic sets, and genomes are run in-house on our <b>Illumina MiSeq</b>, most often using 300+300 bp paired-end V3 chemistry which 
+								allows for overlap and stitching togther of paired amplicon reads into one full-length read of higher quality. Output is generally ~25 million reads and ~15 Gb of sequence = 
+								~250,000 reads per plate of 96 or ~80,000 for 384. For larger meta-genomic/-transcriptomic projects, sequencing is outsourced to locations that have an <b>Illumina HiSeq</b>, 
+								such as the Genome-Qu&eacute;bec/McGill Innovation Centre. 
 							</p>
 						</section>
 					</article>
