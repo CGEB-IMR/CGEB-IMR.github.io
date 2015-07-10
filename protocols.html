@@ -43,7 +43,9 @@
 						<ul>
 							<li><a href="index.html">Home</a></li>
 							<li><a href="about.html">About Us</a></li>
+							<li><a href="achieve.html">Achievements</a></li>
 							<li><a href="submissions.html">Project/Sample Submissions</a></li>
+							<li><a href="pricing.html">Pricing</a></li>
 							<li>
 								<a href="protocols.html">Protocols</a>
 								<ul>
@@ -54,11 +56,12 @@
 										<ul>
 											<li><a href="protocols.html#lib16S">16S Amplicons</a></li>
 											<li><a href="protocols.html#lib18S">18S Amplicons</a></li>
-											<li><a href="protocols.html#libMetaG">Metagenomes</a></li>
-											<li><a href="protocols.html#libMetaT">Metatranscriptomes</a></li>
+											<li><a href="protocols.html#libMetaG">(Meta)genomes</a></li>
+											<li><a href="protocols.html#libMetaT">(Meta)transcriptomes</a></li>
 										</ul>
 									</li>
 									<li><a href="protocols.html#NGS">NGS Sequencing</a></li>
+									<li><a href="protocols.html#bioinfo">Bioinformatics</a></li>
 								</ul>
 							</li>
 							<li><a href="contact.html">Contact Us</a></li>
@@ -77,8 +80,8 @@
 						</header>
 						<section>
 							<p>The following protocol summaries are for the generation of paired-end sequencing reads of 16S or 18S PCR amplicons with multiple barcodes (ie: "indices") on the Illumina MiSeq 
-							machine of length approx. 400-500 bp (300+300 bp with ~100 bp overlap). It assumes an input of 96 individual samples but can be scaled down or up (to 384) as appropriate. These protocols 
-							are a synthesis of multiple sources in the current scientific literature, but draws heavily upon the following four sources:
+							machine of length approx. 400-500 bp (300+300 bp with ~100 bp overlap). It assumes an input of up to 384 (380 samples + 4 PCR controls). These protocols are a synthesis of multiple 
+							sources in the current scientific literature, but draws heavily upon the following four sources:
 							<ul class="default">
 								<li><b>Comeau AM, Li WK, Tremblay JE, Carmack EC, Lovejoy C.</b> 2011. Arctic Ocean microbial community structure before and after the 2007 record sea ice minimum. <i>PLoS ONE</i>, 6:e27492. PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/22096583" target="new">22096583</a>. [<font style="color: red;">primer design/sequences and PCR set-up</font>]
 								<li><b>Fadrosh DW, Ma B, Gajer P, Sengamalay N, Ott S, Brotman RM, Ravel J.</b> 2014. An improved dual-indexing approach for multiplexed 16S rRNA gene sequencing on the Illumina MiSeq platform. <i>Microbiome</i>, 2:6. PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/24558975" target="new">24558975</a>. [<font style="color: red;">Illumina indexing set-up and post-PCR treatment</font>]
@@ -140,16 +143,16 @@
 						</section>
 						<section>
 							<header>
-								<a name="libMetaG"></a><h3><i>&rarr; Metagenomes ("Shotgun")</i></h3>
+								<a name="libMetaG"></a><h3><i>&rarr; (Meta)genomes ("Shotgun")</i></h3>
 							</header>
-							<p>Bacterial (and eventually microeukaryote) community metagenomes are prepared using the <b>Illumina Nextera XT</b> kit which requires a very small amount of starting material 
+							<p>Microbial (or mtDNA) genomes and community metagenomes are prepared using the <b>Illumina Nextera XT</b> kit which requires a very small amount of starting material 
 							(1 ng) as it is a PCR-based library preparation procedure. Briefly, samples are "tagmented" (enzymatically "sheared" and tagged with adaptors), PCR amplified while adding barcodes, 
 							purified using AMPure beads, normalized using Illumina beads, then pooled for loading onto the MiSeq.
 							</p>
 						</section>
 						<section>
 							<header>
-								<a name="libMetaT"></a><h3><i>&rarr; Metatranscriptomes ("RNA-Seq")</i></h3>
+								<a name="libMetaT"></a><h3><i>&rarr; (Meta)transcriptomes ("RNA-Seq")</i></h3>
 							</header>
 							<p>The choice of library prep for metatranscriptomes varies somewhat, depending a few factors: 1) source organism; 2) anticipated/measured RNA quality/quantity; 3) whether 
 							"strandedness" is a concern; and 4) whether mRNA-only, whole transcriptomes and/or small RNAs wish to be analyzed. The base kit for these appplications is <b>Illumina TruSeq</b> - 
@@ -162,11 +165,38 @@
 								<a name="NGS"></a><h3>Next-Generation Sequencing</h3>
 							</header>
 							<p>
-								Amplicon samples, small meta-genomic/-transcriptomic sets, and genomes are run in-house on our <b>Illumina MiSeq</b>, most often using 300+300 bp paired-end V3 chemistry which 
+								Amplicon samples, small metagenomic sets, and genomes are run in-house on our <b>Illumina MiSeq</b>, most often using 300+300 bp paired-end V3 chemistry which 
 								allows for overlap and stitching togther of paired amplicon reads into one full-length read of higher quality. Output is generally ~25 million reads and ~15 Gb of sequence = 
-								~250,000 reads per plate of 96 or ~80,000 for 384. For larger meta-genomic/-transcriptomic projects, sequencing is currently outsourced to locations that have an 
+								~80,000 reads per sample for 384 16S/18S amplicons. For larger metagenomic/metatranscriptomic projects, sequencing is currently outsourced to locations that have an 
 								<b>Illumina HiSeq</b>, such as the Genome-Qu&eacute;bec/McGill Innovation Centre. However, funding for an <b>Illumina NextSeq 500</b> has been recently secured and, once 
-								installed, will provide us the capacity to conduct medium-to-large projects locally.
+								installed (Spring 2016), will provide us the capacity to conduct medium-to-large projects locally.
+							</p>
+						</section>
+						<section>
+							<header>
+								<a name="NGS"></a><h3>Bioinformatics Analyses</h3>
+							</header>
+							<p>
+								Details of our 16S and metagenomics pipelines are available at <a href="https://github.com/mlangill/microbiome_helper" target="new">https://github.com/mlangill/microbiome_helper</a>, 
+								but the following is a summary of the major deliverables clients will receive (analyses will require a "mapping file" from the clients containing any relevant metadata for 
+								the study):
+								<p><i><b>16S/18S Amplicon Analysis</b></i>
+								<ul class="default">
+									<li>Combined FASTA file of the quality-controlled sequences (formatted for use in QIIME)
+									<li>Final OTU tables in text, BIOM and STAMP formats (from open-ref. picking at 97%)
+									<li>FASTA file of representative sequences (one per OTU)
+									<li>Taxonomic assignment files at various levels (ex: phylum, genus, etc.)
+									<li>Alpha-diversity rarefaction plots
+									<li>Beta-diversity UniFrac plots
+									<li>Functional prediction files generated from PICRUSt
+								</ul>
+								<p><i><b>Metagenomics Analysis</b></i>
+								<ul class="default">
+									<li>FASTA files of the final sequences screened to remove human (or other) contaminants
+									<li>Taxonomic composition of the samples from MetaPhlAn 2.0 (text and STAMP files)
+									<li>Functional prediction files generated from HUMAnN (text and STAMP files) for individual KO numbers, KEGG modules and KEGG pathways
+								</ul>
+								<p><b>Custom Bioinformatics:</b> Additional bioinformatic analyses can be requested at an hourly rate or through research collaboration. Please contact us for more details.
 							</p>
 						</section>
 					</article>

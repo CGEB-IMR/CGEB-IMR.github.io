@@ -43,7 +43,9 @@
 						<ul>
 							<li><a href="index.html">Home</a></li>
 							<li><a href="about.html">About Us</a></li>
+							<li><a href="achieve.html">Achievements</a></li>
 							<li><a href="submissions.html">Project/Sample Submissions</a></li>
+							<li><a href="pricing.html">Pricing</a></li>
 							<li>
 								<a href="protocols.html">Protocols</a>
 								<ul>
@@ -54,11 +56,12 @@
 										<ul>
 											<li><a href="protocols.html#lib16S">16S Amplicons</a></li>
 											<li><a href="protocols.html#lib18S">18S Amplicons</a></li>
-											<li><a href="protocols.html#libMetaG">Metagenomes</a></li>
-											<li><a href="protocols.html#libMetaT">Metatranscriptomes</a></li>
+											<li><a href="protocols.html#libMetaG">(Meta)genomes</a></li>
+											<li><a href="protocols.html#libMetaT">(Meta)transcriptomes</a></li>
 										</ul>
 									</li>
 									<li><a href="protocols.html#NGS">NGS Sequencing</a></li>
+									<li><a href="protocols.html#bioinfo">Bioinformatics</a></li>
 								</ul>
 							</li>
 							<li><a href="contact.html">Contact Us</a></li>
@@ -79,11 +82,12 @@
 								</header>
 								<section>
 									<p>
-										Coming soon we will have here more info on the procedures for project and sample submissions, including an <b>Excel form</b> 
-										to be filled out with all of your details for tracking purposes. You will be given a unique project identifier in 
-										the form of "<b>IMR-YYYYMM-00</b>" which will allow sample tracking and ease of communication between the IMR and clients. 
-										In the meantime, please contact the <a href="mailto:cgeb-imr@dal.ca"><b>IMR Manager</b></a> directly to discuss project 
-										submissions.
+										Contact the <a href="mailto:andre.comeau@dal.ca"><b>IMR Manager</b></a> directly to initiate your project's consultation, then 
+										download our Excel form:
+										<p><b><a href="docs/IMR-AmpliconSubmissionSheet(your_last_name_here).xlsx" target="new">Amplicon Sample Submission Form <img src="images/excel-icon.png" height="30" style="vertical-align:middle"></a></b>
+										<p>This form is to be filled out with all of your details for tracking purposes and has sample preparation guidelines. You will be 
+										given a unique project/sample identifier in the form of "<b>IMR-YYYYMM-00</b>" which will allow sample tracking and ease of 
+										communication between the IMR and clients, and will show up on your billing information and the queue at right. 
 									</p>
 								</section>
 								<section>
@@ -92,16 +96,16 @@
 									</header>
 									<p>
 										In order to offer as flexible (and economical) a service as possible to the community, we will not be insisting that clients 
-										fulfill a complete multiplexed run of 95 (95 + 1 negative control = 96) or 380 (380 + 4 negatives = 384) samples. We will offer 
-										the option of sequencing less samples, but with the caveat that your samples may take a bit longer in the pipeline as we wait 
-										for the remainder of the 95 or 380 slots to be filled by other projects/individuals. Of course, you will always have the option 
-										of expediting your service by purchasing the complete run at any time (even with less than 95/380 samples).
+										fulfill a complete multiplexed run of 380 (380 + 4 negatives = 384) samples. We offer the option of sequencing less samples, but 
+										with the caveat that your samples may take a bit longer in the pipeline as we wait for the remainder of the 380 slots to be 
+										filled by other projects/individuals. Of course, you will always have the option of expediting your service by purchasing the 
+										complete run at any time (even with less than 380 samples).
 									</p>
 									<p>
 										We will attempt to maintain as close to real-time as possible project/sample information on the queue display on the right 
 										of this page. This will allow you to monitor the progress of your samples through the IMR workflow. It will also allow 
 										prospective clients to get a sense of how full the current queued sequencing run is for those who wish to multiplex without 
-										contributing a whole run of 95/380 (as discussed above).
+										contributing a whole run of 380 (as discussed above).
 									</p>
 								</section>
 							</article>
@@ -112,21 +116,25 @@
 									<h3>Real-Time Sample Queue</h3>
 								</header>
 								<p>
-									Current partial 96 sequencing run:	&nbsp; <span class="queueR">0/95 samples</span>
+									Current partial 384 Run16 (August):	&nbsp; <span class="queueO">371/380 samples</span>
 									<br>&nbsp;
-									<br>Current partial 384 sequencing run:	&nbsp; <span class="queueO">59/380 samples</span>
+									<br>Current partial 384 Run15 (July):	&nbsp; <span class="queueG">380/380 samples</span>
 								</p>
 								<p>Status of current projects (<span class="dotO">&#9679;</span> = in progress; <span class="dotG">&#9679;</span> = completed):
 								<table class="queueT">
-									<tr><th>&nbsp;<font style="color: red;"><i>As of Jul.6</i></font><th>Run#<th>Rec'd<th>Extr.<th>Libr.<th>Seq.<th>Bioinfo.</tr>
-									<tr><td>IMR-201507-02 (Laroche>Ratten)		<td>14<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><td><td></tr>
-									<tr><td>IMR-201507-01 (Langille+Grandy)		<td>14<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><td><td></tr>
-									<tr><td>IMR-201506-04 (Armstrong)		<td>14<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><td><td></tr>
-									<tr><td>IMR-201506-03 (Beiko>Dhanani)		<td>14<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><td><td></tr>
-									<tr><td>IMR-201506-02 (Slamovits>Stemmler 18S)	<td>14<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><td><td></tr>
-									<tr><td>IMR-201506-01 (Slamovits>Stemmler 16S)	<td>14<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><td><td></tr>
-									<tr><td>IMR-201505-02 (Rohde>Kottwitz)		<td>14<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><td><td></tr>
-									<tr><td>IMR-201505-01 (Van Limbergen)		<td>14<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><td><td></tr>
+									<tr><th>&nbsp;<font style="color: red;"><i>As of Jul.10</i></font><th>Run#<th>Rec'd<th>Extr.<th>Libr.<th>Seq.<th>Bioinfo.</tr>
+									<tr><td>IMR-201508-XX (Beiko>Dhanani)		<td>16<td><span class="dotO">&#9679;</span><td><span class="dotO">&#9679;</span><td><td><td></tr>
+									<tr><td>IMR-201507-XX (Whiteson)		<td>16<td><span class="dotO">&#9679;</span><td><span class="dotO">&#9679;</span><td><td><td></tr>
+									<tr><td>IMR-201505-01 (Van Limbergen - 16S)	<td>16<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><td><td></tr>
+									<tr><td>IMR-201507-XX (Laroche>Stephanie)	<td>15<td><span class="dotO">&#9679;</span><td><span class="dotO">&#9679;</span><td><td><td></tr>
+									<tr><td>IMR-201507-01 (Laroche>Ratten)		<td>15<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><td><td></tr>
+									<tr><td>IMR-201506-05 (Langille+Grandy)		<td>15<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><td><td></tr>
+									<tr><td>IMR-201506-04 (Armstrong)		<td>15<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><td><td></tr>
+									<tr><td>IMR-201506-03 (Beiko>Dhanani)		<td>15<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><td><td></tr>
+									<tr><td>IMR-201506-02 (Slamovits>Stemmler 18S)	<td>15<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><td><td></tr>
+									<tr><td>IMR-201506-01 (Slamovits>Stemmler 16S)	<td>15<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><td><td></tr>
+									<tr><td>IMR-201505-02 (Rohde>Kottwitz)		<td>15<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><td><td></tr>
+									<tr><td>IMR-201507-02 (Van Limbergen - MetaG)	<td>14<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><td><td></tr>
 									<tr><td>IMR-201504-06B2 (Van Limbergen - MetaG)	<td>13<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-</tr>
 									<tr><td>IMR-201504-06B (Van Limbergen - MetaG)	<td>12<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-</tr>
 									<tr><td>IMR-201504-05 (Laroche - Genomic)	<td>11<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><span class="dotO">&#9679;</span></tr>
