@@ -64,8 +64,7 @@
 									<li>
 										<a href="protocols.html#library">Library Preparation &hellip;</a>
 										<ul>
-											<li><a href="protocols.html#lib16S">16S Amplicons</a></li>
-											<li><a href="protocols.html#lib18S">18S Amplicons</a></li>
+											<li><a href="protocols.html#libAmp">16S/18S/ITS Amplicons</a></li>
 											<li><a href="protocols.html#libMetaG">(Meta)genomes</a></li>
 											<li><a href="protocols.html#libMetaT">(Meta)transcriptomes</a></li>
 										</ul>
@@ -127,34 +126,15 @@
 						</section>
 						<section>
 							<header>
-								<a name="lib16S"></a><h3><i>&rarr; 16S Amplicons (Bacteria and Archaea)</i></h3>
+								<a name="libAmp"></a><h3><i>&rarr; 16S/18S/ITS Amplicons</i></h3>
 							</header>
-							<p>16S fragments are PCR-amplified from the DNA in duplicate using separate template dilutions (generally 1:1 & 1:10) using the high-fidelity <b>Phusion</b> 
-							polymerase. A single round of PCR is done using "fusion primers" (Illumina adaptors + indices + specific regions) targeting the <b>V6/V7/V8 region</b> (438/446 bp usable sequence for Bacteria/Archaea) with 
-							multiplexing which allows up to 384 samples to be run. We are currently also evaluating <b>V4/V5 primers</b> as an option for our service and they may soon be available. PCR products are verified visually by running a high-throughput <b>Invitrogen 96-well E-gel</b>. Any samples with 
-							failed PCRs (or spurious bands) are re-amplified by optimizing PCR conditions to produce correct bands in order to complete the sample plate before continuing. The PCR reactions 
-							from the same samples are pooled in one plate, then cleaned-up and normalized using the high-throughput <b>Invitrogen SequalPrep 96-well Plate Kit</b>. The (up to) 384 samples are 
-							then pooled to make one library which is then quantified and quality-checked as above before sequencing.
-							</p>
-						</section>
-						<section>
-							<header>
-								<a name="lib18S"></a><h3><i>&rarr; 18S Amplicons (Eukarya)</i></h3>
-							</header>
-							<p>18S fragments are PCR-amplified from the DNA in duplicate using separate template dilutions (generally 1:1 & 1:10) using the high-fidelity <b>Phusion</b> 
-							polymerase. A single round of PCR is done using "fusion primers" (Illumina adaptors + indices + specific regions) targeting the <b>V4 region</b> (typically 438 bp useable sequence, but some organisms have indels) with 
-							multiplexing which allows up to 384 samples to be run. In cases where human or mouse 18S DNA contamination will be of great concern, a <b>mammalian blocking primer</b> is 
-							used following the protocol from the EMP listed above. PCR products are verified visually by running a high-throughput <b>Invitrogen 96-well E-gel</b>. Any samples with 
-							failed PCRs (or spurious bands) are re-amplified by optimizing PCR conditions to produce correct bands in order to complete the sample plate before continuing. The PCR	reactions 
-							from the same samples are pooled in one plate, then cleaned-up and normalized using the high-throughput <b>Invitrogen SequalPrep 96-well Plate Kit</b>. The (up to) 384 samples are 
-							then pooled to make one library which is then quantified and quality-checked as above before sequencing.
-							</p>
-						</section>
-						<section>
-							<header>
-								<a name="libITS"></a><h3><i>&rarr; ITS Amplicons (Fungi)</i></h3>
-							</header>
-							<p>We are currently evaluating <b>ITS1 or ITS2 primers</b> as an option for our service and they may soon be available.
+							<p>Amplicon fragments are PCR-amplified from the DNA in duplicate using separate template dilutions (generally 1:1 & 1:10) using the high-fidelity <b>Phusion</b> polymerase. A 
+							single round of PCR is done using "fusion primers" (Illumina adaptors + indices + specific regions) targeting either the <b>16S V6-V8</b> (Bacteria/Archaea; ~440-450 bp), 
+							<b>16S V4-V5</b> (primarily Bacteria; ~410 bp), <b>18S V4</b> (Eukarya; ~440 bp) or <b>ITS</b> (Fungi; variable length, avg. ~350 bp) regions with multiplexing which allows up to 
+							380 samples to be run. PCR products are verified visually by running a high-throughput <b>Invitrogen 96-well E-gel</b>. Any samples with failed PCRs (or spurious bands) are 
+							re-amplified by optimizing PCR conditions to produce correct bands in order to complete the sample plate before continuing. The PCR reactions from the same samples are pooled in 
+							one plate, then cleaned-up and normalized using the high-throughput <b>Invitrogen SequalPrep 96-well Plate Kit</b>. The (up to) 380 samples are	then pooled to make one library 
+							which is then quantified fluorometrically before sequencing.
 							</p>
 						</section>
 						<section>
@@ -163,16 +143,16 @@
 							</header>
 							<p>Microbial (or mtDNA) genomes and community metagenomes are prepared using the <b>Illumina Nextera XT</b> kit which requires a very small amount of starting material (1 ng) as it 
 							is a PCR-based library preparation procedure. Briefly, samples are "tagmented" (enzymatically "sheared" and tagged with adaptors), PCR amplified while adding barcodes, purified 
-							using columns, normalized using Illumina beads or manually, then pooled for loading onto the MiSeq or NextSeq.
+							using columns or beads, normalized using Illumina beads or manually, then pooled for loading onto the MiSeq or NextSeq.
 							</p>
 						</section>
 						<section>
 							<header>
 								<a name="libMetaT"></a><h3><i>&rarr; (Meta)transcriptomes ("RNA-Seq")</i></h3>
 							</header>
-							<p>We are currently in the process of evaluating <b>Illumina (Ribo-Zero + TruSeq Stranded mRNA LT)</b> vs. <b>NuGEN (Ovation Complete Prokaryotic RNA-Seq)</b> kits for the production of 
-							sufficiently rRNA-depleted libraries for RNA-Seq. Briefly, after rRNA depletion, remaining mRNAs are converted to cDNA in a way that maintains stranded information, tagged with 
-							adaptors+barcodes, PCR amplified, purified using columns, normalized using beads or manually, then pooled for loading onto the MiSeq or NextSeq.
+							<p>We are currently in the process of evaluating <b>Illumina (Ribo-Zero + TruSeq Stranded mRNA LT)</b> vs. <b>NuGEN (Ovation Complete Prokaryotic RNA-Seq)</b> kits for the 
+							production of sufficiently rRNA-depleted libraries for RNA-Seq. Briefly, after rRNA depletion, remaining mRNAs are converted to cDNA in a way that maintains stranded information, 
+							tagged with adaptors+barcodes, PCR amplified, purified using columns or beads, normalized using beads or manually, then pooled for loading onto the MiSeq or NextSeq.
 							</p>
 						</section>
 						<section>
@@ -181,8 +161,8 @@
 							</header>
 							<p>
 								Amplicon samples, small metagenomic sets, and small genomes are run on our <b>Illumina MiSeq</b> using 300+300 bp paired-end V3 chemistry which	allows for overlap and 
-								stitching togther of paired amplicon reads into one full-length read of higher quality. Output is generally ~25 million raw reads and ~15 Gb of sequence = ~80,000 reads per 
-								sample for 384 amplicons. For larger metagenomic/metatranscriptomic projects, we run on our recently-acquired <b>Illumina NextSeq 550</b> using 150+150 bp paired-end "high 
+								stitching togther of paired amplicon reads into one full-length read of higher quality. Output is generally ~22 million raw reads and ~13 Gb of sequence = ~60,000 reads per 
+								sample for 380 amplicons. For larger metagenomic/metatranscriptomic projects, we run on our recently-acquired <b>Illumina NextSeq 550</b> using 150+150 bp paired-end "high 
 								output" chemistry generating up to ~400 million raw reads and ~120 Gb of sequence.
 							</p>
 						</section>
@@ -191,13 +171,13 @@
 								<a name="NGS"></a><h3>Bioinformatics Analyses</h3>
 							</header>
 							<p>
-								Details of our 16S/18S and metagenomics pipelines are available at <a href="https://github.com/mlangill/microbiome_helper" target="new">https://github.com/mlangill/microbiome_helper</a>, 
+								Details of our amplicon and metagenomics pipelines are available at <a href="https://github.com/mlangill/microbiome_helper" target="new">https://github.com/mlangill/microbiome_helper</a>, 
 								but the following is a summary of the major deliverables clients will receive (analyses will require a "mapping file" from the clients containing any relevant metadata for 
 								the study):
-								<p><i><b>16S/18S Amplicon Analysis</b></i>
+								<p><i><b>16S/18S/ITS Amplicon Analysis</b></i>
 								<ul class="default">
 									<li>Combined FASTA file of the quality-controlled sequences (formatted for use in QIIME)
-									<li>Final OTU tables in text, BIOM and STAMP formats (from open-ref. picking at 97% [Bact./Arch.] or 99% [Euk.])
+									<li>Final OTU tables in text, BIOM and STAMP formats (from open-ref. picking at 97% [Bact./Arch.] or 98% [Euk.])
 									<li>FASTA file of representative sequences (one per OTU)
 									<li>Taxonomic assignment files at various levels (ex: phylum, genus, etc.)
 									<li>Alpha-diversity rarefaction plots
