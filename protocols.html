@@ -90,9 +90,12 @@
 						<section>
 							<p>The following protocol summaries are for the generation of paired-end sequencing reads of 16S or 18S PCR amplicons with multiple barcodes (ie: "indices") on the Illumina MiSeq 
 							machine of length approx. 400-500 bp (300+300 bp with ~100-200 bp overlap). It assumes an input of up to 384 (380 samples + 4 PCR controls). These protocols are a synthesis of multiple 
-							sources in the current scientific literature, but draws upon some of the following sources:
+							sources in the current scientific literature, but draws mainly from the following sources:
 							<ul class="default">
-								<li><b>Comeau AM, Li WK, Tremblay JE, Carmack EC, Lovejoy C.</b> 2011. Arctic Ocean microbial community structure before and after the 2007 record sea ice minimum. <i>PLoS ONE</i>, 6:e27492. PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/22096583" target="new">22096583</a>. [<font style="color: red;">primer design/sequences and PCR set-up</font>]
+								<li><b>Comeau AM, Douglas GM, Langille M.</b> 201X. A custom and streamlined workflow for microbiome research. <i>mSystems</i>, submitted. [<font style="color: red;">overview of the entire IMR wet-lab and bioinformatics pipeline</font>]
+								<li><b>Comeau AM, Li WK, Tremblay JE, Carmack EC, Lovejoy C.</b> 2011. Arctic Ocean microbial community structure before and after the 2007 record sea ice minimum. <i>PLoS ONE</i>, 6:e27492. <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0027492" target="new">Link to Article</a>. [<font style="color: red;">Bacteria and Archaea 16S V6-V8 and 18S V4 primer design/sequences and PCR set-up</font>]
+								<li><b>William W, et al.</b> 2015. Improved bacterial 16S rRNA gene (V4 and V4-5) and fungal Internal Transcribed Spacer marker gene primers for microbial community surveys. <i>mSystems</i>, 1:e00009-15. <a href="http://msystems.asm.org/content/1/1/e00009-15" target="new">Link to Article</a>. [<font style="color: red;">16S V4-V5 primer design/sequences</font>]
+								<li><b>Op De Beeck M, Lievens B, Busschaert P, Declerck S, Vangronsveld J, Colpaert JV</b> 2014. Comparison and validation of some ITS primer pairs useful for fungal metabarcoding studies. <i>PLoS ONE</i>, 9:e97629. <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0097629" target="new">Link to Article</a>. [<font style="color: red;">ITS2 primer design/sequences</font>]
 								<li><b>Earth Microbiome Project (EMP)</b> at <a href="http://www.earthmicrobiome.org/emp-standard-protocols/" target="new">www.earthmicrobiome.org/emp-standard-protocols/</a> [<font style="color: red;">blocking protocol for eukaryote contaminants</font>]
 								<li><b>Human Microbiome Project (HMP)</b> at <a href="http://hmpdacc.org/resources/tools_protocols.php" target="new">hmpdacc.org/resources/tools_protocols.php</a> [<font style="color: red;">general considerations/extraction for stool samples</font>]
 							</ul>
@@ -104,7 +107,8 @@
 							</header>
 							<p>Sample collection issues can be very specific to your sample type (ie: the medium which you are sampling) - many of our IMR projects so far focus on water column "environmental" 
 							samples or fecal matter. For the former, varying volumes of water are typically collected onto filters and frozen at -20&deg;C or -80&deg;C in a storage buffer. For the latter, fresh fecal 
-							pellets are collected from mice or human stool is sampled and then frozen immediately at -20&deg;C or -80&deg;C (without buffer). All samples are kept frozen until extraction below.
+							pellets are collected from mice or human stool is sampled and then frozen immediately at -20&deg;C or -80&deg;C (without buffer). All samples are kept frozen until extraction below. 
+							For transcriptomics approaches for environmental, lab culture or biopsy samples (not recommended for stool), samples must be immediately flash-frozen in liquid nitrogen after collection.
 							</p>
 						</section>
 						<section>
@@ -113,7 +117,7 @@
 							</header>
 							<p>DNA/RNA is extracted from the samples using the method/kit appropriate to the specific samples - this may also be a choice you make for your personal samples since you have experience 
 							with them, or you may wish to follow our choice extraction methods. There is no general consensus in the literature on choice of kits, other than to say all of them affect the 
-							final profiles to some degree and that bead-beating is most probably a must for difficult materials (and/or with much Gram+ves and protist cysts) - we have currently evaluated and
+							final profiles to some degree and that bead-beating is most probably a must for difficult materials (and/or with Gram+ves and protist cysts) - we have currently evaluated and
 							are using the <b>MO BIO PowerFecal DNA Kit</b> with mouse pellets and human fecal samples. We are also testing various DNA kits for use with human urine. We have not yet ventured into 
 							RNA kits for metatranscriptomes, but this is something that we will be examining in the near future. Quantification and quality-checks are done (via NanoDrop or PicoGreen/Qubit) to 
 							verify success. <i>Optional: A gel can be run to verify integrity (generally unnecessary for PCR-only studies, but required for shotgun metagenomic sequencing).</i>
@@ -130,7 +134,7 @@
 							</header>
 							<p>Amplicon fragments are PCR-amplified from the DNA in duplicate using separate template dilutions (generally 1:1 & 1:10) using the high-fidelity <b>Phusion</b> polymerase. A 
 							single round of PCR is done using "fusion primers" (Illumina adaptors + indices + specific regions) targeting either the <b>16S V6-V8</b> (Bacteria/Archaea; ~440-450 bp), 
-							<b>16S V4-V5</b> (primarily Bacteria; ~410 bp), <b>18S V4</b> (Eukarya; ~440 bp) or <b>ITS</b> (Fungi; variable length, avg. ~350 bp) regions with multiplexing which allows up to 
+							<b>16S V4-V5</b> (primarily Bacteria; ~410 bp), <b>18S V4</b> (Eukarya; ~440 bp) or <b>ITS2</b> (Fungi; variable length, avg. ~350 bp) regions with multiplexing which allows up to 
 							380 samples to be run. PCR products are verified visually by running a high-throughput <b>Invitrogen 96-well E-gel</b>. Any samples with failed PCRs (or spurious bands) are 
 							re-amplified by optimizing PCR conditions to produce correct bands in order to complete the sample plate before continuing. The PCR reactions from the same samples are pooled in 
 							one plate, then cleaned-up and normalized using the high-throughput <b>Invitrogen SequalPrep 96-well Plate Kit</b>. The (up to) 380 samples are	then pooled to make one library 
