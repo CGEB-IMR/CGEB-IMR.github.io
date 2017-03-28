@@ -66,15 +66,9 @@
 							<p>To begin payment, enter your invoice details below and click <b>Submit</b> - you will then be taken to our secure payment site. 
 							<p><i><font style="color:red">Note: Client name refers to the Bill To name on your invoice; enter only one invoice number per payment; and enter the total Canadian dollar amount below as written in your invoice, regardless of your local currency (conversion will take place via your credit card).</font></i>
 
-							<p><form action="https://rpm.demo.e-xact.com/payment" method="post">
-								<input name="x_login" value="WSP-DAL-I-97GEDgATQA" type="hidden">
-								<b>Client Name: &nbsp;</b><input name="x_cust_id" type="text" maxlength="70" size="70">
-								<br><br><b>Invoice #: &nbsp;69318-</b><input name="x_invoice_num" type="text" maxlength="4" size="10"> &nbsp;&nbsp;&nbsp;<b>Amount to pay (no commas): $&nbsp;<input name="x_amount" type="text" size="10" maxlength="10"> CDN</b>
-								<input name="x_fp_sequence" value="69318" type="hidden">
-								<input name="x_fp_timestamp" value="X" type="hidden">
-								<input name="x_fp_hash" value="X" type="hidden">
-								<input name="x_test_request" value="TRUE" type="hidden">
-								<input name="x_show_form" value="PAYMENT_FORM" type="hidden">
+							<p><form action="process_data.cgi" method="post">
+								<b>Client Name: &nbsp;</b><input name="cust_id" type="text" maxlength="70" size="70">
+								<br><br><b>Invoice #: &nbsp;69318-</b><input name="invoice_num" type="text" maxlength="4" size="10"> &nbsp;&nbsp;&nbsp;<b>Amount to pay (no commas): $&nbsp;<input name="amount" type="text" size="10" maxlength="10"> CDN</b>
 								<br><br><input value="Submit" type="submit">
 							</form>
 							</p>
