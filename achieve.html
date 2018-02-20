@@ -101,7 +101,7 @@
 								<p><center><img src="images/SamplesSep2017.png" width="700"></center>
 							<p>
 								The following is a map of the origins of our clients (with samples originating from an even wider geographic area, depending on the research project): 
-								<p><center><iframe src="https://www.google.com/maps/d/u/0/embed?mid=zaA_XBPQv_vU.kX_CeIHzdZmA" width="800" height="480"></iframe></center>
+								<p><center><iframe id="map" width="800" height="480"></iframe></center>
 						</section>
 					</article>
 					</div>
@@ -119,6 +119,17 @@
 								</div>
 							
 			</div>
-
+		<script>
+			$(function() {
+				$(window).on('load', function() {
+					// Re-set the iframe src to fix a display issue resulting from hiding
+					// the html content on load (to fix FOUC).
+    			$('iframe#map').attr(
+    				'src',
+						'https://www.google.com/maps/d/u/0/embed?mid=zaA_XBPQv_vU.kX_CeIHzdZmA'
+					);
+				});
+			});
+		</script>
 	</body>
 </html>
