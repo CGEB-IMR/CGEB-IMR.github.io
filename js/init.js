@@ -68,6 +68,7 @@
 
 		var	$window = $(window),
 			$body = $('body'),
+			$html = $('html'),
 			$header =  $('#header');
 			
 		// Disable animations/transitions until the page has loaded.
@@ -75,6 +76,7 @@
 			
 			$window.on('load', function() {
 				$body.removeClass('is-loading');
+				$html.css('display', 'block');
 			});
 			
 		// CSS polyfills (IE<9).
