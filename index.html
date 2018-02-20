@@ -30,6 +30,12 @@
 
 		</script>
 
+		<script>
+			// Reduce the effect of FOUC (init.js always sets html display to block)
+			var html_el = document.getElementsByTagName('html')[0];
+			html_el.style.display = 'none';
+		</script>
+
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
