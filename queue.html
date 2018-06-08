@@ -54,7 +54,7 @@
 							<h1><a href="index.html" id="logo">Integrated Microbiome Resource (IMR)</a></h1>
 						</header>
 					</div>
-				
+
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
@@ -70,7 +70,7 @@
 					</nav>
 
 			</div>
-			
+
 		<!-- Main -->
 			<div class="wrapper style1">
 
@@ -84,190 +84,14 @@
 							through the IMR workflow. It will also allow prospective clients to get a sense of how full the current queued sequencing runs are for those who wish to multiplex without 
 							contributing whole runs (as discussed on our submissions page).
 							<h3><font style="color:red">Warning: Due to high demand, sample queue is quite full, extending typical data delivery time to ~3 months.</font></h3>
+							<p></p>
 
-							<p><center><b><font size=5em>Current total number of samples committed to queue: &nbsp; <font style="color:red">6,565</font>
-							<br>Last update of queue: &nbsp; <font style="color:red">Jun 1</font></font></b></center>
-							<p><table><tr>
-								<td align=center><table class="queueT" style="width:60%;">
-										<tr><th colspan=4>Upcoming <font style="color:red">MiSeq</font> Runs
-										<tr><th>Run	<th>Type	<th>Level of Completeness			<th>Planned Dates
-										<tr><td>Run166:	<td>Amplicon	<td><span class="queueG">373/373 samples</span>	<td>Jun.X
-										<tr><td>Run165:	<td>Amplicon	<td><span class="queueG">380/380 samples</span>	<td>Jun.X
-										<tr><td>Run164:	<td>Amplicon	<td><span class="queueG">376/376 samples</span>	<td>Jun.5-8
-										<tr><td>Run163:	<td>Amplicon	<td><span class="queueG">370/370 samples</span>	<td>running...
-										<tr><td>Run157:	<td>Amplicon	<td><span class="queueG">380/380 samples</span>	<td>paused
-										<tr><td>Run153:	<td>MetaG	<td><span class="queueG">6/6 samples</span>	<td>paused
-										<tr><td>Run113:	<td>MetaG	<td><span class="queueG">6/6 samples</span>	<td>paused
-										</table>
-								<td width=30>&nbsp;
-								<td align=center><table class="queueT" style="width:60%;">
-										<tr><th colspan=4>Upcoming <font style="color:red">NextSeq</font> Runs
-										<tr><th>Run	<th>Type	<th>Level of Completeness			<th>Planned Dates
-										<tr><td>RunNS16:<td>MetaG	<td><span class="queueG">92/96 slots</span>	<td>Jun.8
-										</table>
-							</table>
-							</p>
-						</section>
-						<section>
-							<p><font size=3em>Legend: <span class="dotO">&#9679;</span> = in progress/pending; <span class="dotG">&#9679;</span> = completed; Extr. = extracted (either in advance by client, or by IMR); Libr. = library prepared; Seq. = sequenced; Anal. = analyzed (if requested).</font>
-							<p><table><tr>
-								<td align=center><table class="queueT">
-										<tr><th colspan=4><font style="color:red">Samples Received</font> (4409)
-										<tr><th>&nbsp;					<th>Target	<th>#	<th>Extr.
+							<div id="queue-app-root"></div>
 
-										<tr><td>IMR-201805-20 (Liang)			<td>BactV68	<td>313	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201805-19 (van Dillewijn)		<td>BactV45	<td>78	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201805-18 (Bosman>Vallance)		<td>BactV68	<td>84	<td><span class="dotO">&#9679;</span>
-										<tr><td>IMR-201805-17 (Griffin)			<td>ITS		<td>128	<td><span class="dotO">&#9679;</span>
-										<tr><td>IMR-201805-16 (Nuester)			<td>WGS		<td>7	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201805-15 (Walker)			<td>ITS		<td>50	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201805-14 (Kembel>Jameson)		<td>Euk		<td>267	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201805-13B (Klepac-C.>Rowland)	<td>BactV45	<td>54	<td><span class="dotG">&#9679;</span>
-										<tr><td>COM-201805-12 (Ganz)			<td>BactV45	<td>32	<td><span class="dotG">&#9679;</span>
-										<tr><td>DAL-201805-10 (VanLimbergen)		<td>BactV45	<td>22	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201805-08B (Delaney>Girguis)	<td>Euk		<td>106	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201805-08A (Delaney>Girguis)	<td>BactV45	<td>106	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201805-07 (Hamilton)		<td>Cyano	<td>43	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201805-03 (Rubio)			<td>BactV45	<td>55	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201805-02 (Grayston>Maillard)	<td>Custom	<td>62	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201805-01 (Maeso)			<td>BactV45	<td>28	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201804-17 (Knowles>Vargas)		<td>BactV45	<td>255	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201804-16 (Casotti)			<td>BactV45	<td>158	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201804-13 (Lawrence>Reid)		<td>BactV68	<td>27	<td><span class="dotO">&#9679;</span>
-										<tr><td>IMR-201804-10 (Parfrey>Davis)		<td>BactV45	<td>536	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201804-07 (Cunning)			<td>Custom	<td>38	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201804-06D (Kim>YHChoe)		<td>ITS		<td>100	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201804-06C (Kim>YHChoe)		<td>Euk		<td>100	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201804-06B (Kim>YHChoe)		<td>Arch	<td>100	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201804-06A (Kim>YHChoe)		<td>BactV45	<td>100	<td><span class="dotG">&#9679;</span>
-										<tr><td>DAL-201803-22 (McLean>Rutherford)	<td>Custom	<td>95	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201803-21 (Peralta>Nogales)		<td>BactV45	<td>86	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201802-21C (Juniper>Stevens PAUSED)	<td>Custom	<td>117	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201802-21B (Juniper>Stevens PAUSED)	<td>Arch	<td>117	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201802-21A (Juniper>Stevens PAUSED)	<td>BactV68	<td>117	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201802-07.4 (Finlay>Boutin PAUSED)	<td>ITS		<td>45	<td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201802-07.3.1 (Finlay>Boutin PAUSED)<td>ITS		<td>343 <td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201802-07.2 (Finlay>Boutin PAUSED)	<td>ITS		<td>380 <td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201801-03B (Angelini+Bade PAUSED)	<td>COI		<td>214	<td><span class="dotG">&#9679;</span>
-										<tr><td>COM-201709-08.R (Settle>Hicks PAUSED)	<td>COI		<td>16	<td><span class="dotG">&#9679;</span>
-										<tr><td>DAL-201708-19 (Yurgel PAUSED)		<td>TnSeq	<td>30	<td><span class="dotG">&#9679;</span>
-
-										</table>
-								<td width=10>&nbsp;
-								<td align=center><table class="queueT">
-										<tr><th colspan=7>Queued for <font style="color:red">MiSeq</font> (1891)
-										<tr><th>&nbsp;					<th>Run	<th>Target	<th>#	<th>Libr.<th>Seq.<th>Anal.
-
-										<tr><td>IMR-201803-15A.1 (Klepac-C.>Rowland)	<td>166	<td>BactV45	<td>373	<td><td><td>
-										<tr style="background-color:grey"><td colspan=7 height=10>
-
-										<tr><td>IMR-201803-14.1 (Snyder>Edgeworthy)	<td>165	<td>BactV45	<td>380	<td><td><td>
-										<tr style="background-color:grey"><td colspan=7 height=10>
-
-										<tr><td>COM-201805-09 (Kociszewska)		<td>164	<td>BactV45	<td>10	<td><span class="dotO">&#9679;</span><td><td>
-										<tr><td>COM-201805-04B (Kim>YMLee)		<td>164	<td>Arch	<td>2	<td><span class="dotO">&#9679;</span><td><td>
-										<tr><td>COM-201805-04A (Kim>YMLee)		<td>164	<td>BactV45	<td>4	<td><span class="dotO">&#9679;</span><td><td>
-										<tr><td>IMR-201803-15B (Klepac-C.>Rowland)	<td>164	<td>ITS		<td>88	<td><span class="dotO">&#9679;</span><td><td>
-										<tr><td>IMR-201803-15A.2 (Klepac-C.>Rowland)	<td>164	<td>BactV45	<td>15	<td><span class="dotO">&#9679;</span><td><td>
-										<tr><td>IMR-201803-14.2 (Snyder>Edgeworthy)	<td>164	<td>BactV45	<td>67	<td><span class="dotO">&#9679;</span><td><td>
-										<tr><td>IMR-201803-11 (Parfrey>Sanders)		<td>164	<td>BactV45	<td>190	<td><span class="dotO">&#9679;</span><td><td>
-										<tr style="background-color:grey"><td colspan=7 height=10>
-
-										<tr><td>DAL-201805-06 (Langille)		<td>163	<td>BactV45	<td>29	<td><span class="dotG">&#9679;</span><td><span class="dotO">&#9679;</span><td>
-										<tr><td>IMR-201803-09B (Finlay>Cirstea)		<td>163	<td>ITS		<td>158	<td><span class="dotG">&#9679;</span><td><span class="dotO">&#9679;</span><td>
-										<tr><td>IMR-201803-09A (Finlay>Cirstea)		<td>163	<td>BactV45	<td>158	<td><span class="dotG">&#9679;</span><td><span class="dotO">&#9679;</span><td>
-										<tr><td>IMR-201802-07.3.2 (Finlay>Boutin PAUSED)<td>163	<td>ITS		<td>25 	<td><span class="dotG">&#9679;</span><td><span class="dotO">&#9679;</span><td>
-										<tr style="background-color:grey"><td colspan=7 height=10>
-
-										<tr><td>COM-201805-05 (Ganz)			<td>162	<td>BactV45	<td>34	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>IMR-201803-19 (Hamdan>Mugge)		<td>162	<td>BactV68	<td>84	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>IMR-201803-18 (Cardenas>Font)		<td>162	<td>BactV68	<td>50	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>IMR-201801-23B (Ortmann)		<td>162	<td>Euk		<td>50	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>IMR-201801-23A (Ortmann)		<td>162	<td>BactV45	<td>145	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr style="background-color:grey"><td colspan=7 height=10>
-
-										<tr><td>IMR-201803-05 (Lee>Song)		<td>161	<td>BactV45	<td>50	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>IMR-201803-08 (Kawamura>Domzalski)	<td>161	<td>BactV45	<td>58	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>IMR-201803-01 (Hayley>Dwyer)		<td>161	<td>BactV45	<td>80	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>DAL-201710-09D (Yurgel+Price)		<td>161	<td>ITS		<td>164	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr style="background-color:grey"><td colspan=7 height=10>
-
-										<tr><td>COM-201804-19 (Martin>Levey)		<td>160	<td>BactV45	<td>189	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>DAL-201804-08 (Gagnon>Allward)		<td>160	<td>BactV68	<td>20	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>IMR-201802-22 (Twiss>Eggleston)		<td>160	<td>BactV45	<td>88	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><span class="dotO">&#9679;</span>
-										<tr><td>IMR-201802-16B (Parfrey>Louca)		<td>160	<td>Euk		<td>30	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>IMR-201802-16A (Parfrey>Louca)		<td>160	<td>BactV45	<td>30	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr style="background-color:grey"><td colspan=7 height=10>
-
-										<tr><td>IMR-201802-07.1 (Finlay>Boutin PAUSED)	<td>157	<td>ITS		<td>380 <td><span class="dotO">&#9679;</span><td><td>
-										<tr style="background-color:grey"><td colspan=7 height=10>
-
-										<tr><td>IMR-201804-04 (Orcutt PAUSED)		<td>153	<td>metaG	<td>6	<td><span class="dotO">&#9679;</span><td><td>
-										<tr style="background-color:grey"><td colspan=7 height=10>
-
-										<tr><td>IMR-201709-02 (Ganz PAUSED)		<td>113	<td>MetaG	<td>6	<td><span class="dotO">&#9679;</span><td><td>
-
-										</table>
-								<td width=10>&nbsp;
-								<td align=center><table class="queueT">
-										<tr><th colspan=7>Queued for <font style="color:red">NextSeq</font> (265)
-										<tr><th>&nbsp;					<th>Run	<th>Target	<th>#	<th>Libr.<th>Seq.<th>Anal.
-
-										<tr><td>IMR-201805-13A (Klepac-C.>Rowland)	<td>-	<td>metaG	<td>202	<td><td><td>
-										<tr style="background-color:grey"><td colspan=7 height=10>
-
-										<tr><td>IMR-201800-00 (New Kit Tests)		<td>NS16<td>metaG	<td>24	<td><span class="dotO">&#9679;</span><td><td>
-										<tr><td>DAL-201805-11 (VanLimbergen)		<td>NS16<td>metaG	<td>22	<td><span class="dotO">&#9679;</span><td><td>
-										<tr><td>IMR-201803-15 (Parfrey>Louca)		<td>NS16<td>metaG	<td>4	<td><span class="dotO">&#9679;</span><td><td>
-										<tr><td>IMR-201803-13 (Altieri>Scott)		<td>NS16<td>metaG	<td>8	<td><span class="dotO">&#9679;</span><td><td>
-										<tr><td>DAL-201803-07 (VanLimb+Langille)	<td>NS16<td>metaG	<td>24	<td><span class="dotO">&#9679;</span><td><td>
-										<tr><td>IMR-201802-27 (Marnocha)		<td>NS16<td>metaG	<td>5x2	<td><span class="dotO">&#9679;</span><td><td>
-										<tr style="background-color:grey"><td colspan=7 height=10>
-
-										<tr><td>IMR-201802-23 (Klepac-C.>Rowland)	<td>NS15<td>metaG	<td>96	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr style="background-color:grey"><td colspan=7 height=10>
-
-										<tr><td>DAL-201802-11C (Langille)		<td>NS14<td>metaG	<td>6	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>IMR-201802-16C (Parfrey>Louca)		<td>NS14<td>metaG	<td>16x2<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>IMR-201802-16C (Parfrey>Louca)		<td>NS14<td>metaG	<td>15	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>DAL-201801-21B (Kulkarni+Langille)	<td>NS14<td>metaG	<td>18	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>DAL-201801-20 (VanLimb+Langille)	<td>NS14<td>metaG	<td>24	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr style="background-color:grey"><td colspan=7 height=10>
-
-										<tr><td>IMR-201707-01B (Lindell+Bielawski)	<td>NS13<td>metaG	<td>96	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr style="background-color:grey"><td colspan=7 height=10>
-
-										<tr><td>IMR-201707-01A (Lindell+Bielawski)	<td>NS12<td>metaG	<td>12		<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>IMR-201710-15 (Lopez-Perez)		<td>NS12<td>WGS		<td>3x4=12	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>IMR-201710-14 (Perez)			<td>NS12<td>metaG	<td>1x4=4	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>IMR-201710-11 (Nachman)			<td>NS12<td>metaG	<td>26x3=78	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr style="background-color:grey"><td colspan=7 height=10>
-
-										<tr><td>IMR-201710-10 (Perez)			<td>NS11<td>metaG	<td>2x4=8 <td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>IMR-201710-06 (VanLimbergen)		<td>NS11<td>metaG	<td>10	  <td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>IMR-201708-34 (Li)			<td>NS11<td>metaG	<td>11	  <td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span>
-										<tr><td>IMR-201708-23 (Stearns)			<td>NS11<td>metaG	<td>3x4=12<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>IMR-201706-18 (Kulkarni+Langille)	<td>NS11<td>metaG	<td>38	  <td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr style="background-color:grey"><td colspan=7 height=10>
-
-										<tr><td>IMR-201708-11 (Lovejoy>Vigneron)	<td>NS10<td>metaG	<td>6	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr style="background-color:grey"><td colspan=7 height=10>
-
-										<tr><td>IMR-201706-XX (redos+controls)		<td>NS9	<td>metaG	<td>27	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>IMR-201706-19 (VanLimbergen)		<td>NS9	<td>metaG	<td>16	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>IMR-201706-06 (Kemp)			<td>NS9	<td>metaG	<td>5x3	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-										<tr><td>IMR-201705-12 (Hamdan>Mugge)		<td>NS9	<td>metaG	<td>37	<td><span class="dotG">&#9679;</span><td><span class="dotG">&#9679;</span><td>-
-
-										</table>
-
-							</table>
-							</p>
 						</section>
 					</article>
 					</div>
 				</div>
-
-			</div>
 
 		<!-- Footer -->
 			<div id="footer">
@@ -277,8 +101,10 @@
 										<li>&copy; CGEB-IMR (2014+). All rights reserved.</li><li>Design template: <a href="http://html5up.net" target="new">HTML5 UP</a></li>
 									</ul>
 								</div>
-							
+
 			</div>
+
+		<script src="js/main.9efe6982.js"></script>
 
 	</body>
 </html>
