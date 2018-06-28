@@ -84,10 +84,10 @@
 							machine of length approx. 400-500 bp (300+300 bp with ~100-200 bp overlap). It assumes an input of up to 384 (380 samples + 4 PCR controls). These protocols are a synthesis of multiple 
 							sources in the current scientific literature, but draws mainly from the following sources:
 							<ul class="default">
-								<li><b>Comeau AM, Douglas GM, Langille M.</b> 2017. Microbiome Helper: A custom and streamlined workflow for microbiome research. <i>mSystems</i>, 2:e00127-16. <a href="http://msystems.asm.org/content/2/1/e00127-16" target="new">Link to Article</a>. [<font style="color: red;">overview of the entire IMR wet-lab and bioinformatics pipeline</font>]
-								<li><b>Comeau AM, Li WK, Tremblay JE, Carmack EC, Lovejoy C.</b> 2011. Arctic Ocean microbial community structure before and after the 2007 record sea ice minimum. <i>PLoS ONE</i>, 6:e27492. <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0027492" target="new">Link to Article</a>. [<font style="color: red;">initial 16S V6-V8 and 18S V4 primer design/sequences</font>]
-								<li><b>Walters W, et al.</b> 2015. Improved bacterial 16S rRNA gene (V4 and V4-5) and fungal Internal Transcribed Spacer marker gene primers for microbial community surveys. <i>mSystems</i>, 1:e00009-15. <a href="http://msystems.asm.org/content/1/1/e00009-15" target="new">Link to Article</a>. [<font style="color: red;">16S V4-V5 primer design/sequences</font>]
-								<li><b>Op De Beeck M, Lievens B, Busschaert P, Declerck S, Vangronsveld J, Colpaert JV</b> 2014. Comparison and validation of some ITS primer pairs useful for fungal metabarcoding studies. <i>PLoS ONE</i>, 9:e97629. <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0097629" target="new">Link to Article</a>. [<font style="color: red;">ITS2 primer design/sequences</font>]
+								<li><a href="http://msystems.asm.org/content/2/1/e00127-16" target="new"><b>Comeau AM, Douglas GM, Langille M.</b> 2017. Microbiome Helper: A custom and streamlined workflow for microbiome research. <i>mSystems</i>, 2:e00127-16.</a> [<font style="color: red;">overview of the entire IMR wet-lab and bioinformatics pipeline</font>]
+								<li><a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0027492" target="new"><b>Comeau AM, Li WK, Tremblay JE, Carmack EC, Lovejoy C.</b> 2011. Arctic Ocean microbial community structure before and after the 2007 record sea ice minimum. <i>PLoS ONE</i>, 6:e27492.</a> [<font style="color: red;">initial 16S V6-V8 and 18S V4 primer design/sequences</font>]
+								<li><a href="http://msystems.asm.org/content/1/1/e00009-15" target="new"><b>Walters W, et al.</b> 2015. Improved bacterial 16S rRNA gene (V4 and V4-5) and fungal Internal Transcribed Spacer marker gene primers for microbial community surveys. <i>mSystems</i>, 1:e00009-15.</a> [<font style="color: red;">16S V4-V5 primer design/sequences</font>]
+								<li><a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0097629" target="new"><b>Op De Beeck M, Lievens B, Busschaert P, Declerck S, Vangronsveld J, Colpaert JV</b> 2014. Comparison and validation of some ITS primer pairs useful for fungal metabarcoding studies. <i>PLoS ONE</i>, 9:e97629.</a> [<font style="color: red;">ITS2 primer design/sequences</font>]
 								<li><b>Earth Microbiome Project (EMP)</b> at <a href="http://www.earthmicrobiome.org/protocols-and-standards/" target="new">www.earthmicrobiome.org/protocols-and-standards/</a> [<font style="color: red;">blocking protocol for eukaryote contaminants</font>]
 								<li><b>Human Microbiome Project (HMP)</b> at <a href="http://hmpdacc.org/resources/tools_protocols.php" target="new">hmpdacc.org/resources/tools_protocols.php</a> [<font style="color: red;">general considerations/extraction for stool samples</font>]
 							</ul>
@@ -127,9 +127,9 @@
 							<p>Amplicon fragments are PCR-amplified from the DNA in duplicate using separate template dilutions (generally 1:1 & 1:10) using the high-fidelity <b>Phusion</b> polymerase. A 
 							single round of PCR is done using "fusion primers" (Illumina adaptors + indices + specific regions) targeting either the <b>16S V6-V8</b> (Bacteria/Archaea; ~440-450 bp), 
 							<b>16S V4-V5</b> (primarily Bacteria; ~410 bp), <b>18S V4</b> (Eukarya; ~440 bp) or <b>ITS2</b> (Fungi; variable length, avg. ~350 bp) regions with multiplexing which allows up to 
-							380 samples to be run. PCR products are verified visually by running a high-throughput <b>Invitrogen 96-well E-gel</b>. Any samples with failed PCRs (or spurious bands) are 
+							380 samples to be run. PCR products are verified visually by running on a high-throughput <b>Hamilton Nimbus Select</b> robot using <b>Coastal Genomics Analytical Gels</b>. Any samples with failed PCRs (or spurious bands) are 
 							re-amplified by optimizing PCR conditions to produce correct bands in order to complete the sample plate before continuing. The PCR reactions from the same samples are pooled in 
-							one plate, then cleaned-up and normalized using the high-throughput <b>Invitrogen SequalPrep 96-well Plate Kit</b>. The (up to) 380 samples are	then pooled to make one library 
+							one plate, then cleaned-up and normalized using the high-throughput <b>Charm Biotech Just-a-Plate 96-well Normalization Kit</b>. The (up to) 380 samples are then pooled to make one library 
 							which is then quantified fluorometrically before sequencing.
 							</p>
 						</section>
@@ -157,8 +157,8 @@
 							</header>
 							<p>
 								Amplicon samples, small metagenomic sets, and small genomes are run on our <b>Illumina MiSeq</b> using 300+300 bp paired-end V3 chemistry which	allows for overlap and 
-								stitching togther of paired amplicon reads into one full-length read of higher quality. Output is generally ~22 million raw reads and ~13 Gb of sequence = ~60,000 reads per 
-								sample for 380 amplicons. For larger metagenomic/metatranscriptomic projects, we run on our recently-acquired <b>Illumina NextSeq 550</b> using 150+150 bp paired-end "high 
+								stitching togther of paired amplicon reads into one full-length read of higher quality. Output is generally ~20-22 million raw reads and ~13 Gb of sequence = ~50,000 reads per 
+								sample for 380 amplicons. For larger metagenomic/metatranscriptomic projects, we run on our hospital-shared <b>Illumina NextSeq 550</b> using 150+150 bp paired-end "high 
 								output" chemistry generating up to ~400 million raw reads and ~120 Gb of sequence.
 							</p>
 						</section>
@@ -172,19 +172,17 @@
 								the study):
 								<p><i><b>16S/18S/ITS Amplicon Analysis</b></i>
 								<ul class="default">
-									<li>Combined FASTA file of the quality-controlled sequences (formatted for use in QIIME)
 									<li>Final OTU tables in text, BIOM and STAMP formats (from open-ref. picking at 97% [Bact./Arch./ITS] or 98% [Euk.])
-									<li>FASTA file of representative sequences (one per OTU)
+									<li>FASTA file of representative sequences (one per OTU) and corresponding tree file
 									<li>Taxonomic assignment files at various levels (ex: phylum, genus, etc.)
 									<li>Alpha-diversity rarefaction plots
 									<li>Beta-diversity UniFrac plots
-									<li>Functional prediction files generated from PICRUSt (Bact. only)
+									<li>Functional prediction files generated from PICRUSt (Bact. only, upon request)
 								</ul>
 								<p><i><b>Metagenomics Analysis</b></i>
 								<ul class="default">
-									<li>FASTA files of the final sequences screened to remove human (or other) contaminants
 									<li>Taxonomic composition of the samples from MetaPhlAn 2.0 (text and STAMP files)
-									<li>Functional prediction files generated from HUMAnN (text and STAMP files) for individual KO numbers, KEGG modules and KEGG pathways
+									<li>Functional prediction files generated from HUMAnN2 (text and STAMP files) for individual KO numbers, KEGG modules and KEGG pathways
 								</ul>
 								<p><b>Custom Bioinformatics:</b> Additional bioinformatic analyses can be requested at an hourly rate or through research collaboration. Please contact us for more details.
 							</p>
