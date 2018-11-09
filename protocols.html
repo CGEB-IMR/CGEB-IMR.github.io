@@ -137,7 +137,7 @@
 							<header>
 								<a name="libMetaG"></a><h3><i>&rarr; (Meta)genomes ("Shotgun")</i></h3>
 							</header>
-							<p>Microbial (or mtDNA) genomes and community metagenomes are prepared using the <b>Illumina Nextera XT</b> kit which requires a very small amount of starting material (1 ng) as it 
+							<p>Microbial (or mtDNA) genomes and community metagenomes are prepared using the <b>Illumina Nextera Flex/b> kit which requires a very small amount of starting material (1 ng) as it 
 							is a PCR-based library preparation procedure. Briefly, samples are "tagmented" (enzymatically "sheared" and tagged with adaptors), PCR amplified while adding barcodes, purified 
 							using columns or beads, normalized using Illumina beads or manually, then pooled for loading onto the MiSeq or NextSeq.
 							</p>
@@ -172,17 +172,21 @@
 								the study):
 								<p><i><b>16S/18S/ITS Amplicon Analysis</b></i>
 								<ul class="default">
-									<li>Final OTU tables in text, BIOM and STAMP formats (from open-ref. picking at 97% [Bact./Arch./ITS] or 98% [Euk.])
-									<li>FASTA file of representative sequences (one per OTU) and corresponding tree file
+									<li>Final ASV/OTU tables in text, BIOM and STAMP formats
+									<li>Accompanying QIIME-formatted mapping/metadata file
+									<li>FASTA file of representative sequences (one per ASV/OTU)
+									<li>Phylogenetic tree of ASVs/OTUs placed within reference sequences
 									<li>Taxonomic assignment files at various levels (ex: phylum, genus, etc.)
-									<li>Alpha-diversity rarefaction plots
+									<li>Alpha-diversity rarefaction plots + statistics
 									<li>Beta-diversity UniFrac plots
-									<li>Functional prediction files generated from PICRUSt (Bact. only, upon request)
+									<li>Logfiles from the various major steps in the QC process
+									<li>Functional prediction files generated from PICRUSt2.0 (if requested)
 								</ul>
 								<p><i><b>Metagenomics Analysis</b></i>
 								<ul class="default">
+									<li>FASTA files of the final sequences screened to remove human (or other) contaminants (available upon request)
 									<li>Taxonomic composition of the samples from MetaPhlAn 2.0 (text and STAMP files)
-									<li>Functional prediction files generated from HUMAnN2 (text and STAMP files) for individual KO numbers, KEGG modules and KEGG pathways
+									<li>Stratified (by taxa) and unstratified functional prediction files generated from HUMAnN 2.0 (text and STAMP files) for individual UniRef90 gene families and MetaCyc pathways
 								</ul>
 								<p><b>Custom Bioinformatics:</b> Additional bioinformatic analyses can be requested at an hourly rate or through research collaboration. Please contact us for more details.
 							</p>
