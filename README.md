@@ -1,4 +1,4 @@
 CGEB-IMR.github.io
 ==================
 
-CGEB Integrated Microbiome Resource
+Integrated Microbiome Resource Website: http://imr.bio
