@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>CGEB - Integrated Microbiome Resource (IMR)</title>
+		<title>Integrated Microbiome Resource (IMR)</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="Information and access to services provided by the Dalhousie University Integrated Microbiome Resource" />
 		<meta name="keywords" content="microbiome, Dalhousie, Halifax, NGS, 16S, 18S, metagenomics, metatranscriptomics, MiSeq, Illumina" />
@@ -83,9 +83,15 @@
 							<header>
 								<h3><font style="color:red"><i>Special Promotion: With the launch of our full-length PacBio sequencing (16S/18S/ITS) we are offering a 10% discount, bringing pricing to $45 CAD/sample for a limited time.</i></font></h3>
 								<br><h3><center>Note: All prices listed are in Canadian Dollars (CAD). International orders must add a $25/shipment fee to cover Customs costs.</center></h3>
-								<br><h3><center><i>Currently Available Amplicon Targets (and primer sets)</i></center></h3>
 							</header>
-								<center><table class="price">
+
+						</section>
+
+<button class="collapsible" style="background:#660066">Amplicon Sequencing (16S, 18S, ITS, etc.)</button>
+<div class="content">
+						<section>
+								<center><h3><center><i>Currently Available Amplicon Targets (and primer sets)</i></center></h3>
+								<table class="price">
 									<tr><th align=left>Primer Targets		<th>Variable Region(s)	<th>Forward Primer			<th>Reverse Primer
 									<tr><th colspan=4 style="background:#eeeeee">Illumina MiSeq short variable region targets
 									<tr><td>Bacteria + Archaea	<td>V4-V5**		<td>515FB = GTGYCAGCMGCCGCGGTAA		<td>926R = CCGYCAATTYMTTTRAGTTT
@@ -135,9 +141,14 @@
 									<tr><td>DNA Extraction<sup>3</sup>						<td style="background:#e7e7fe">$15					<td style="background:#c2e2ff">$16
 									<tr><td>Custom Bioinformatics Analysis						<td style="background:#e7e7fe">inquire					<td style="background:#c2e2ff">inquire
 								</table>
-								<i>Note: PacBio pricing is currently introductory and could change within 2019 as we perfect the system/depths of coverage.</i> 
+								<i>Note: PacBio pricing is currently introductory and could change within 2019 as we perfect the system/depths of coverage.</i>
+								<br>&nbsp;
 							</p>
 						</section>
+</div>
+
+<button class="collapsible" style="background:#0070C0">Client-Prepared Pool Sequencing</button>
+<div class="content">
 						<section>
 							<p>
 								<table class="price">
@@ -147,8 +158,13 @@
 									<tr><td>MiSeq Sequencing Run (~20-25 M PE reads & 12-15 Gb)	<td style="background:#e7e7fe">$3200					<td style="background:#c2e2ff">$4700
 								</table>
 								<i>Note: For clients wishing to use part of a run with a prepared pool of amplicons, simply divide 380 by your sample # x the above price to determine your pool cost (this is for a 1X depth, simply double the amount for 2X).</i> 
+								<br>&nbsp;
 							</p>
 						</section>
+</div>
+
+<button class="collapsible" style="background:#FFC000"><font style="color:black">Whole Genome Sequencing & Resequencing</font></button>
+<div class="content">
 						<section>
 							<p>
 								<table class="price">
@@ -180,8 +196,13 @@
 									<tr><td>Custom Bioinformatics Analysis				<td style="background:#e7e7fe">inquire					<td style="background:#c2e2ff">inquire
 								</table>
 								<i>Note: PacBio pricing is currently introductory and could change within 2019 as we perfect the system/depths of coverage.</i> 
+								<br>&nbsp;
 							</p>
 						</section>
+</div>
+
+<button class="collapsible" style="background:#C00000">Metagenome Sequencing</button>
+<div class="content">
 						<section>
 							<p>
 								<table class="price">
@@ -223,8 +244,13 @@
 									<tr><td>DNA Extraction<sup>3</sup>									<td style="background:#e7e7fe">variable					<td style="background:#c2e2ff">variable
 									<tr><td>Standard Bioinformatics Analysis Pipeline<sup>5</sup>						<td style="background:#e7e7fe">$750/project				<td style="background:#c2e2ff">$1500/project
 								</table>
+								<br>&nbsp;
 							</p>
 						</section>
+</div>
+
+<button class="collapsible" style="background:#538135">(Meta)Transcriptome & Isoform Sequencing</button>
+<div class="content">
 						<section>
 							<p>
 								<table class="price">
@@ -246,11 +272,30 @@
 									<tr><td>Standard PacBio Iso-Seq Pipeline<sup>5</sup>		<td style="background:#e7e7fe">inquire					<td style="background:#c2e2ff">inquire
 								</table>
 								<i>Note: PacBio pricing is currently introductory and could change within 2019 as we perfect the system/depths of coverage.</i> 
+								<br>&nbsp;
 							</p>
 						</section>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
 						<section>
 							<header>
-								<h3><i>Notes/Details</i></h3>
+								<br><h3><i>Notes/Details</i></h3>
 							</header>
 							<p>
 								1. One control well is required per 96-well PCR library plate, hence a maximum of 4x95 = 380 samples can be done together on one MiSeq run (190 for a 2X run). Any batches >380 will need to be spread across mutliple sequencing runs.
