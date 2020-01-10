@@ -126,10 +126,11 @@
 							<p>Amplicon fragments are PCR-amplified from the DNA in duplicate using separate template dilutions (generally 1:1 & 1:10) using the high-fidelity <b>Phusion</b> polymerase. A 
 							single round of PCR is done using "fusion primers" (Illumina adaptors + indices + specific regions) targeting either the <b>16S V6-V8</b> (Bacteria/Archaea; ~440-450 bp), 
 							<b>16S V4-V5</b> (primarily Bacteria; ~410 bp), <b>18S V4</b> (Eukarya; ~440 bp) or <b>ITS2</b> (Fungi; variable length, avg. ~350 bp) regions with multiplexing which allows up to 
-							380 samples to be run. PCR products are verified visually by running on a high-throughput <b>Hamilton Nimbus Select</b> robot using <b>Coastal Genomics Analytical Gels</b>. Any samples with failed PCRs (or spurious bands) are 
-							re-amplified by optimizing PCR conditions to produce correct bands in order to complete the sample plate before continuing. The PCR reactions from the same samples are pooled in 
-							one plate, then cleaned-up and normalized using the high-throughput <b>Charm Biotech Just-a-Plate 96-well Normalization Kit</b>. The (up to) 380 samples are then pooled to make one library 
-							which is then quantified fluorometrically before sequencing.
+							380 samples to be run. Preparation for PacBio Sequel is essentially the same, except <b>full-length 16S/18S/ITS</b> fusion primers (PacBio adaptors + barcodes + specific regions) 
+							are used instead. PCR products are verified visually by running on a high-throughput <b>Hamilton Nimbus Select</b> robot using <b>Coastal Genomics Analytical Gels</b>. Any samples 
+							with failed PCRs (or spurious bands) are re-amplified by optimizing PCR conditions to produce correct bands in order to complete the sample plate before continuing. The PCR reactions 
+							from the same samples are pooled in one plate, then cleaned-up and normalized using the high-throughput <b>Charm Biotech Just-a-Plate 96-well Normalization Kit</b>. Up to 380 (Illumina) 
+							or 47 (PacBio) samples are then pooled to make one library which is then quantified fluorometrically before sequencing.
 							</p>
 						</section>
 						<section>
@@ -159,9 +160,9 @@
 							<p>
 								Amplicon samples, small metagenomic sets, and small genomes are run on our <b>Illumina MiSeq</b> using 300+300 bp paired-end V3 chemistry which	allows for overlap and 
 								stitching togther of paired amplicon reads into one full-length read of higher quality. Output is generally ~20-22 million raw reads and ~13 Gb of sequence = ~50,000 reads 
-								per sample for 380 amplicons. <i>De novo</i> genomes are run on our <b>PacBio Sequel</b> using v3 chemistry which outputs roughly 30-40 Gb of sequence per cell of variable 
-								(long) lengths. For larger metagenomic/metatranscriptomic projects, we run on our hospital-shared <b>Illumina NextSeq 550</b> using 150+150 bp paired-end "high output" 
-								chemistry generating up to ~400 million raw reads and ~120 Gb of sequence.
+								per sample for 380 amplicons. Long amplicons and <i>de novo</i> genomes are run on our <b>PacBio Sequel</b> using v3 chemistry which outputs roughly 30-40 Gb of sequence per 
+								cell of variable (long) lengths. For larger metagenomic/metatranscriptomic projects, we run on our hospital-shared <b>Illumina NextSeq 550</b> using 150+150 bp paired-end 
+								"high output" chemistry generating up to ~400 million raw reads and ~120 Gb of sequence.
 							</p>
 						</section>
 						<section>
