@@ -594,6 +594,7 @@
 				{
 					text-align: left;
 				}
+
 			table.price
 			{
 				width: 100%;
@@ -620,6 +621,38 @@
 				}
 
 				table.price td:first-child
+				{
+					text-align: left;
+				}
+
+			table.primers
+			{
+				width: 100%;
+			}
+
+				table.primers tbody tr:first-child
+				{
+					border-top: 0;
+				}
+			
+				table.primers th
+				{
+					font-weight: bold;
+					padding: 0.1em 0.1em 0.1em 0.1em;
+					vertical-align: middle;
+					border-bottom: solid 1px #000000;
+					font-size: 14px;
+				}
+
+				table.primers td
+				{
+					text-align: center;
+					padding: 0.1em 0.1em 0.1em 0.1em;
+					vertical-align: middle;
+					font-size: 15px;
+				}
+
+				table.primers td:first-child
 				{
 					text-align: left;
 				}
