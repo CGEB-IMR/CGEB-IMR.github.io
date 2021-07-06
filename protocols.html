@@ -169,7 +169,7 @@
 								<a name="libMetaG"></a><h3><i>&rarr; (Meta)genomes ("Shotgun")</i></h3>
 							</header>
 							<p>Microbial (or mtDNA) genomes and community metagenomes are prepared either using: 1) the <b>Illumina Nextera Flex</b> kit for MiSeq+NextSeq, which requires a very small amount 
-							of starting material (1 ng) as it is a PCR-based library preparation procedure; or 2) the <b>PacBio SMRTbell Template Prep</b> kit for the Sequel, which requires much more HMW DNA 
+							of starting material (1 ng) as it is a PCR-based library preparation procedure; or 2) the <b>PacBio SMRTbell Express Template Prep</b> kit for the Sequel, which requires much more HMW DNA 
 							since it is not PCR-based. For the Illumina method, samples are "tagmented" (enzymatically "sheared" and tagged with adaptors), PCR amplified while adding barcodes, purified using 
 							columns or beads, normalized using Illumina beads or manually, then pooled for loading onto the MiSeq or NextSeq. For the PacBio method, a large amount of HMW DNA is mechanically 
 							sheared (<b>Covaris gTubes</b>), optionally size-selected, repaired, converted into SMRTbell libraries (covalently closed circles), cleaned-up and normalized, then pooled for 
@@ -180,9 +180,10 @@
 							<header>
 								<a name="libMetaT"></a><h3><i>&rarr; (Meta)transcriptomes ("RNA-Seq")</i></h3>
 							</header>
-							<p>We are currently in the process of evaluating <b>Illumina (Ribo-Zero replacement + TruSeq Stranded)</b> vs. <b>QIAGEN (QIAseq FastSelect depletion + Stranded Total RNA)</b> kits 
-							for the	production of sufficiently rRNA-depleted libraries for RNA-Seq. Briefly, after rRNA depletion, remaining mRNAs are converted to cDNA in a way that maintains stranded 
-							information, tagged with Illumina adaptors+barcodes, PCR amplified, purified using columns or beads, normalized using beads or manually, then pooled for loading onto the NextSeq.
+							<p>We recently completed our evaluation of multiple RNA-Seq kits with rRNA depletion and have selected the <b>QIAseq FastSelect depletion + Stranded Total RNA</b> kits for the	
+							production of sufficiently rRNA-depleted libraries (using three rRNA modules = Bacteria + Plant[covers Protists] + Fungi). Briefly, pure RNA samples are rRNA depleted, then the 
+							remaining mRNAs are converted to cDNA in a way that maintains stranded information, tagged with Illumina adaptors+barcodes, PCR amplified, purified using beads, then normalized for 
+							pooling + loading onto the NextSeq.
 							</p>
 						</section>
 						<section>
@@ -190,11 +191,11 @@
 								<a name="NGS"></a><h3>Next-Generation Sequencing</h3>
 							</header>
 							<p>
-								Amplicon samples, small metagenomic sets, and small genomes are run on our <b>Illumina MiSeq</b> using 300+300 bp paired-end V3 chemistry which	allows for overlap and 
-								stitching togther of paired amplicon reads into one full-length read of higher quality. Output is generally ~20-22 million raw reads and ~13 Gb of sequence = ~50,000 reads 
-								per sample for 380 amplicons. Long amplicons and <i>de novo</i> genomes are run on our <b>PacBio Sequel</b> using v3 chemistry which outputs roughly 30-40 Gb of sequence per 
-								cell of variable (long) lengths. For larger metagenomic/metatranscriptomic projects, we run on our hospital-shared <b>Illumina NextSeq 550</b> using 150+150 bp paired-end 
-								"high output" chemistry generating up to ~400 million raw reads and ~120 Gb of sequence.
+								Amplicon samples and small genomes are run on our <b>Illumina MiSeq</b> using 300+300 bp paired-end V3 chemistry which allows for overlap and stitching togther of paired 
+								amplicon reads into one full-length read of higher quality. Output is generally ~20-22 million raw reads and ~13 Gb of sequence = ~50,000 reads per sample for 380 amplicons. 
+								Long amplicons and <i>de novo</i> genomes are run on our <b>PacBio Sequel</b> using v3 chemistry which outputs roughly 30-40 Gb of sequence per cell of variable (long) 
+								lengths. For larger metagenomic/metatranscriptomic projects, we run on our <b>Illumina NextSeq 550</b> using 150+150 bp paired-end "high output" chemistry generating up to 
+								~400 million raw reads and ~120 Gb of sequence.
 							</p>
 						</section>
 						<section>
@@ -217,7 +218,7 @@
 									<li>Logfiles from the various major steps in the QC process
 									<li>Functional prediction files generated from PICRUSt2.0 (if requested)
 								</ul>
-								<p><i><b>Metagenomics Analysis</b></i>
+								<p><i><b>Metagenomics/Metatranscriptomics Analysis</b></i>
 								<ul class="default">
 									<li>FASTA files of the final sequences screened to remove human (or other) contaminants (available upon request)
 									<li>Taxonomic composition of the samples from Kraken2 (text and STAMP files)
