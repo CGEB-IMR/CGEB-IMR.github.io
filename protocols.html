@@ -131,8 +131,7 @@
 							(Eukarya, incl. Fungi) or <b>ITS2</b> (Fungi only) genes with multiplexing which allows up to 380 samples to be run. Preparation for PacBio Sequel 2 is essentially the same, except 
 							<b>full-length 16S/18S/ITS</b> fusion primers (PacBio barcodes + specific regions) are used instead. PCR products are verified visually by running on a high-throughput 
 							<b>Hamilton Nimbus Select</b> robot using <b>Coastal Genomics Analytical Gels</b>. The PCR reactions from the same samples are pooled in one plate, then cleaned-up and normalized 
-							using the high-throughput <b>Charm Biotech Just-a-Plate 96-well Normalization Kit</b>. Up to 380 (Illumina) or 190 (PacBio) samples are then pooled to make one library which is then 
-							quantified fluorometrically before sequencing.
+							using bead-based kits. Up to 380 (Illumina) or 190 (PacBio) samples are then pooled to make one library which is then quantified fluorometrically before sequencing.
 							</p>
 						</section>
 						<section>
@@ -177,16 +176,15 @@
 							of starting material (1 ng) as it is a PCR-based library preparation procedure; or 2) the <b>PacBio SMRTbell Prep Kit 3.0</b> for the Sequel, which requires more HMW DNA 
 							since it is not PCR-based. For the Illumina method, samples are "tagmented" (enzymatically "sheared" and tagged with adaptors), PCR amplified while adding barcodes, purified using 
 							columns or beads, normalized using Illumina beads or manually, then pooled for loading onto the MiSeq or NextSeq. For the PacBio method, the HMW DNA is mechanically 
-							sheared (<b>Covaris gTubes</b>), optionally size-selected, repaired, converted into SMRTbell libraries (covalently closed circles), cleaned-up and normalized, then pooled for 
-							loading onto the Sequel. 
+							sheared (if needed), optionally size-selected, repaired, converted into SMRTbell libraries (covalently closed circles), cleaned-up and normalized, then pooled for loading onto the Sequel. 
 							</p>
 						</section>
 						<section>
 							<header>
 								<a name="libMetaT"></a><h3><i>&rarr; (Meta)transcriptomes ("RNA-Seq")</i></h3>
 							</header>
-							<p>We recently completed our evaluation of multiple RNA-Seq kits with rRNA depletion and have selected the <b>QIAseq FastSelect depletion + Stranded Total RNA</b> kits for the	
-							production of sufficiently rRNA-depleted libraries (using three rRNA modules = Bacteria + Plant[covers Protists] + Fungi). Briefly, pure RNA samples are rRNA depleted, then the 
+							<p>We recently completed our evaluation of multiple RNA-Seq kits with rRNA depletion and have selected the <b>Zymo-Seq RiboFree Total RNA Library</b> kit for the	
+							production of sufficiently rRNA-depleted libraries (using universal Bacteria/Archaea + Eukarya removal). Briefly, pure RNA samples are rRNA depleted, then the 
 							remaining mRNAs are converted to cDNA in a way that maintains stranded information, tagged with Illumina adaptors+barcodes, PCR amplified, purified using beads, then normalized for 
 							pooling + loading onto the NextSeq.
 							</p>
@@ -199,7 +197,7 @@
 								Amplicon samples and small genomes are run on our <b>Illumina MiSeq</b> using 300+300 bp paired-end V3 chemistry which allows for overlap and stitching togther of paired 
 								amplicon reads into one full-length read of higher quality. Output is generally ~20-22 million raw reads and ~13 Gb of sequence = ~50,000 reads per sample for 380 amplicons. 
 								Long amplicons and <i>de novo</i> genomes are run on our <b>PacBio Sequel 2</b> using new 8M chips which output roughly 240-320 Gb of sequence per cell of variable (long) 
-								lengths. For larger metagenomic/metatranscriptomic projects, we run on our <b>Illumina NextSeq 2000</b> using 150+150 bp paired-end "high output" chemistry generating up to 
+								lengths. For larger metagenomic/metatranscriptomic projects, we run on our <b>Illumina NextSeq 2000</b> using 150+150 bp paired-end chemistry (on P3 cells usually) generating up to 
 								~1.2 billion raw PE reads and ~345 Gb of sequence.
 							</p>
 						</section>
