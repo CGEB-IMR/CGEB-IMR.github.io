@@ -79,9 +79,9 @@
 							<h2>Protocols</h2>
 						</header>
 						<section>
-							<p>The following protocol summaries are for the generation+sequencing of WGS/metagenome libraries (Illumina NextSeq or PacBio Sequel 2) or PCR amplicons with multiple barcodes (ie: "indices") on 
-							either the Illumina MiSeq machine (paired-end mode) of length approx. 400-500 bp (300+300 bp with ~100-200 bp overlap) or of longer reads on the PacBio Sequel 2. It assumes an input 
-							of up to 384 (380 samples + 4 PCR controls) for MiSeq or 192 for Sequel 2 (190 samples + 2 PCR controls) or NextSeq2000 (92 metagenomes). These protocols are a synthesis of manufacturer's guidelines
+							<p>The following protocol summaries are for the generation+sequencing of WGS/metagenome libraries (Illumina NextSeq or PacBio Vega) or PCR amplicons with multiple barcodes (ie: "indices") on 
+							either the Illumina MiSeq machine (paired-end mode) of length approx. 400-500 bp (300+300 bp with ~100-200 bp overlap) or of longer reads on the PacBio Vega. It assumes an input 
+							of up to 384 (380 samples + 4 PCR controls) for MiSeq or 192 for Vega (190 samples + 2 PCR controls) or NextSeq2000 (92 metagenomes). These protocols are a synthesis of manufacturer's guidelines
 							and our current scientific research and development. They are summarized (primarily amplicon protocols) in the <b>"IMR paper"</b> here below that outlines <b>Microbiome Helper</b>, as well as on our 
 							<b>GitHub</b> site for <b>Microbiome Helper</b>, which outlines all the steps to follow for the bioinformatics processing, and on our <b>Protocols.io</b> site conatining the step-by-step wet-lab protocols:
 							<ul class="default">
@@ -128,7 +128,7 @@
 							</header>
 							<p>Amplicon fragments are PCR-amplified from the DNA in duplicate using separate template dilutions (generally 1:1 & 1:10) using the high-fidelity <b>Phusion Plus</b> polymerase. A 
 							single round of PCR is done using "fusion primers" (Illumina adaptors + indices + specific regions) targeting various sub-regions of the <b>16S</b> (Bacteria/Archaea), <b>18S</b> 
-							(Eukarya, incl. Fungi) or <b>ITS2</b> (Fungi only) genes with multiplexing which allows up to 380 samples to be run. Preparation for PacBio Sequel 2 is essentially the same, except 
+							(Eukarya, incl. Fungi) or <b>ITS2</b> (Fungi only) genes with multiplexing which allows up to 380 samples to be run. Preparation for PacBio Vega is essentially the same, except 
 							<b>full-length 16S/18S/ITS</b> fusion primers (PacBio barcodes + specific regions) are used instead. PCR products are verified visually by running on a high-throughput 
 							<b>Hamilton Nimbus Select</b> robot using <b>Coastal Genomics Analytical Gels</b>. The PCR reactions from the same samples are pooled in one plate, then cleaned-up and normalized. 
 							Up to 380 (Illumina) or 190 (PacBio) samples are then pooled to make one library which is then quantified fluorometrically before sequencing.
@@ -153,7 +153,7 @@
 								<tr><td colspan=11><h3><font style="color:#660066"><i>Metabarcoding targets (require preamplification)</i></h3>
 								<tr><td>All Metazoans					<td>COI				<td>mlCOIintF-XT = GGWACWRGWTGRACWITITAYCCYCC	<td>jgHCO2198 = TAIACYTCIGGRTGICCRAARAAYCA		<td><a href="https://peerj.com/articles/4705/" target="new">Wangensteen 2018</a> / <a href="https://onlinelibrary.wiley.com/doi/10.1111/1755-0998.12138" target="new">Geller 2013</a>										<td>n/a								<td>n/a								<td>n/a								<td>n/a								<td>n/a							<td>n/a
 								<tr><td>Fish						<td>12S				<td>MiFishU-F = GTCGGTAAAACTCGTGCCAGC			<td>MiFishU-R = CATAGTGGGGTATCTAATCCCAGTTTG	<td><a href="https://royalsocietypublishing.org/doi/10.1098/rsos.150088" target="new">Miya 2015</a>																									<td>n/a								<td>n/a								<td>n/a								<td>n/a								<td>n/a							<td>n/a
-								<tr><td colspan=11 style="background:#eeeeee"><center><b>PacBio Sequel entire region targets</center></b>
+								<tr><td colspan=11 style="background:#eeeeee"><center><b>PacBio Vega entire region targets</center></b>
 								<tr><td colspan=11><h3><font style="color:#660066"><i>Standard rRNA targets</i></h3>
 								<tr><td><b>Bacteria-specific			<td><b>Full 16S			<td>27F(Paliy) = AGRGTTYGATYMTGGCTCAG			<td>1492R = RGYTACCTTGTTACGACTT				<td><a href="https://aem.asm.org/content/75/11/3572.long" target="new">Paliy 2009</a> / Lane 1991																									<td>-									<td style="background-color:palegreen">72-83%	<td style="background-color:palegreen">72-87%	<td>-									<td style="background-color:yellow">42-74%	<td style="background-color:palegreen">65-84%
 								<tr><td><b>Eukaryote-specific			<td><b>Full 18S<sup>g</sup><td>NSF4/18 = CTGGTTGATYCTGCCAGT			<td>EukR = TGATCCTTCTGCAGGTTCACCTAC			<td><a href="https://www.sciencedirect.com/science/article/abs/pii/S0723202089800669" target="new">Hendriks 1989</a> / <a href="https://www.sciencedirect.com/science/article/abs/pii/0378111988900662" target="new">Medlin 1988</a>	<td style="background-color:#ffcccc">0-14%		<td>-									<td>-									<td style="background-color:palegreen">82-92%	<td style="background-color:#ffcccc">2%	<td style="background-color:#ffcccc">1%
@@ -164,7 +164,7 @@
 							<br>b) The V4-V5 primer set is our overall recommended set, but should not be used for bacterial diversity in samples with substantial eukaryote "host/associated" contamination (use V6-V8 sets instead, however these are still susceptible to Euk mito contamination).
 							<br>c) Although both ITS1 and ITS2 primers have substantial Ascomycete or Basidiomycete biases, the ITS2 region seems to be the more recommended region of the two with highest coverage of other phyla.
 							<br>d) The 519R primer with this sequence is sometimes called "mod" or "modbio", but the stated sequence here is the actual Lane original sequence.
-							<br>e) Note this is the newer EMP set, the older/original primers being 515F (GTGCCAGCMGCCGCGGTAA) + 806R (GGACTACHVGGGTWTCTAAT). These primers are not recommended for 2x300bp sequencing (which we always perform) is its size is too small - use V4V5 instead.
+							<br>e) Note this is the newer EMP set, the older/original primers being 515F (GTGCCAGCMGCCGCGGTAA) + 806R (GGACTACHVGGGTWTCTAAT). These primers are not recommended for 2x300bp sequencing (which we usually perform) is its size is too small - use V4V5 instead.
 							<br>f) The Cyano primers in our hands tend to perform less well in PCR+sequencing than the other sets listed here, but are the only alternative for more Cyano-specific studies. However, note that they will not give more specific annotations than the other bacterial amplicons.
 							<br>g) The listed coverage for this primer set is from only the NSF4/18 forward primer values as there is insufficient coverage of the EukR region in SILVA to get reliable results.
 						</section>
@@ -173,10 +173,10 @@
 								<a name="libMetaG"></a><h3><i>&rarr; (Meta)genomes ("Shotgun")</i></h3>
 							</header>
 							<p>Microbial (or mtDNA) genomes and community metagenomes are prepared either using: 1) the <b>Illumina Nextera Flex</b> kit for MiSeq+NextSeq (<i>now called DNA Prep kit</i>), which requires a very small amount 
-							of starting material (1 ng) as it is a PCR-based library preparation procedure; or 2) the <b>PacBio SMRTbell Prep Kit 3.0</b> for the Sequel, which requires more HMW DNA 
+							of starting material (1 ng) as it is a PCR-based library preparation procedure; or 2) the <b>PacBio SMRTbell Prep Kit 3.0</b> for the Vega, which requires more HMW DNA (90% >7 kb) 
 							since it is not PCR-based. For the Illumina method, samples are "tagmented" (enzymatically "sheared" and tagged with adaptors), PCR amplified while adding barcodes, purified using 
 							columns or beads, normalized using Illumina beads or manually, then pooled for loading onto the MiSeq or NextSeq. For the PacBio method, the HMW DNA is mechanically 
-							sheared (if needed), optionally size-selected, repaired, converted into SMRTbell libraries (covalently closed circles), cleaned-up and normalized, then pooled for loading onto the Sequel. 
+							sheared (if needed), optionally size-selected, repaired, converted into SMRTbell libraries (covalently closed circles), cleaned-up and normalized, then pooled for loading onto the Vega. 
 							</p>
 						</section>
 						<section>
@@ -194,9 +194,9 @@
 								<a name="NGS"></a><h3>Next-Generation Sequencing</h3>
 							</header>
 							<p>
-								Amplicon samples and small genomes are run on our <b>Illumina MiSeq</b> using 300+300 bp paired-end V3 chemistry which allows for overlap and stitching togther of paired 
+								Amplicon samples and small genomes are run on our <b>Illumina MiSeq i100</b> using 300+300 bp XLEAP chemistry which allows for overlap and stitching togther of paired 
 								amplicon reads into one full-length read of higher quality. Output is generally ~20-22 million raw reads and ~13 Gb of sequence = ~50,000 reads per sample for 380 amplicons. 
-								Long amplicons and <i>de novo</i> genomes are run on our <b>PacBio Sequel 2</b> using new 8M chips which output roughly 240-320 Gb of sequence per cell of variable (long) 
+								Long amplicons and <i>de novo</i> genomes are run on our <b>PacBio Vega</b> using SMRTcells which output roughly 240-320 Gb of sequence per cell of variable (long) 
 								lengths. For larger metagenomic/metatranscriptomic projects, we run on our <b>Illumina NextSeq 2000</b> using 150+150 bp paired-end chemistry (on P3 cells usually) generating up to 
 								~1.2 billion raw PE reads and ~345 Gb of sequence.
 							</p>
