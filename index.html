@@ -1,142 +1,450 @@
 <!DOCTYPE HTML>
 <!--
-	Helios by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Archetype by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
 -->
 <html>
 	<head>
-		<title>Integrated Microbiome Resource (IMR)</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="Information and access to services provided by the Integrated Microbiome Resource" />
-		<meta name="keywords" content="microbiome, Halifax, NGS, 16S, 18S, metagenomics, metatranscriptomics, MiSeq, Illumina" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>
-		<script src="js/jquery.scrolly.min.js"></script>
-		<script src="js/jquery.onvisible.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-			ga('create', 'UA-65099719-1', 'auto');
-			ga('send', 'pageview');
-
-		</script>
-
-		<script>
-			// Reduce the effect of FOUC (init.js always sets html display to block)
-			var html_el = document.getElementsByTagName('html')[0];
-			html_el.style.display = 'none';
-		</script>
-
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-noscript.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<title>Integrated Microbiome Resource</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/counter.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<link rel="stylesheet" href="assets/css/tabs.css" />
 	</head>
-	<body class="homepage">
+	<body class="landing is-preload">
 
 		<!-- Header -->
-			<div id="header">
-						
-				<!-- Inner -->
-					<div class="inner">
-						<header>
-							<h1>Integrated Microbiome Resource (IMR)</h1>
-							<p>&nbsp;
-						</header>
-						<footer>
-							<a href="#banner" class="button circled scrolly">Explore</a>
-						</footer>
-					</div>
-				
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">About Us</a></li>
-							<li><a href="achieve.html">Achievements</a></li>
-							<li><a href="submissions.html">Submission Guidelines</a></li>
-							<li><a href="queue.html">Real-Time Queue</a></li>
-							<li><a href="pricing.html">Services/Pricing</a></li>
-							<li><a href="protocols.html">Protocols</a></li>
-							<li><a href="contact.html">Contact Us</a></li>
-						</ul>
-					</nav>
+			<header id="header" class="">
+				<h1 id="logo"><a href="index.html">
+					<img src="images/logo_purple_whiteBG.png" alt="IMR Logo" class="header-logo-img">
+				</a>
+				<a href="index.html">
+					<span class="logo-text">IMR</span>
+				</a>
+				</h1>
 
+
+				<nav id="nav">
+					<ul>
+						<!--<li><a href="index.html">Home</a></li>-->
+						<li><a href="index.html#about-us">About Us</a></li>
+						<li><a href="achieve.html">Achievements</a></li>
+						<li><a href="submissions.html">Submission</a></li>
+						<li><a href="queue.html">Real-Time Queue</a></li>
+						<li><a href="pricing.html">Services/Pricing</a></li>
+						<li><a href="protocols.html">Protocols</a></li>
+						<li><a href="index.html#footer">Contact Us</a></li>
+					</ul>
+				</nav>
+			</header>
+
+<!-- Banner -->
+<section id="banner" class="wrapper">
+    <video class="video-bg" poster="images/DNA_test.png" autoplay muted loop playsinline>
+        <source src="videos/LandingAnimation_rot_720p.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>    
+
+    <div class="inner">
+        <div class="announcements-box">
+            <header>
+                <h2>Announcements</h2>
+            </header>
+            <ul>
+                <li><strong>Nov 2025:</strong> New reduced pricing and increased outputs!</li>
+                <li><strong>Mar 2025:</strong> 1st in Canada PacBio Vega!</li>
+                <li><strong>Dec 2024:</strong> 1st in Canada MiSeq i100!</li>
+            </ul>
+        </div>
+
+        <div class="intro-box">
+            <header>
+                <h2>Integrated Microbiome Resource</h2>
+            </header>
+            <p>A sequencing and bioinformatics resource for the microbiome community. We help researchers,
+            clinicians and industry tackle the challenges of microbiome science, guiding them from <b>study design consultation</b>,
+            through <b>sample preparation</b> and <b>sequencing</b>, to final <b>data analysis</b>.</p>
+        </div>
+    </div>
+</section>
+
+<section id="main" class="wrapper">
+    <div class="inner">
+        <div class="full-width-image-container">
+
+			<div class="workflow-labels">
+				<a href="pricing.html" class="pricing-link">
+					SEQUENCING STARTING AT $20 PER SAMPLE!
+				</a>
 			</div>
-			
-		<!-- Banner -->
-			<section id="banner">
-				<header>
-					<h2>Welcome to the <strong>IMR</strong>.</h2>
-					<p>
-						A sequencing and bioinformatic analysis resource for the microbiome community. We help researchers, 
-						<br>clinicians and industry tackle the challenges of microbiome science, guiding them from <strong>study design 
-						consultation</strong>, <br>through <strong>sample preparation</strong> and <strong>sequencing</strong>, to final 
-						<strong>data analysis</strong>.
-					</p>
-				</header>
-			</section>
 
-		<!-- Carousel -->
-			<section class="carousel">
-				<div class="reel">
+			<img src="images/workflow_no_text.png" 
+				alt="Workflow Diagram" 
+				class="image fit" />
 
-					<article>
-						<a href="about.html" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-						<header>
-							<h3><a href="about.html">About the IMR</a></h3>
-						</header>
-						<p>Learn about the people behind the IMR, our funding/partners and our mandate...</p>							
-					</article>
-				
-					<article>
-						<a href="pricing.html" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-						<header>
-							<h3><a href="pricing.html">Explore our Servcies</a></h3>
-						</header>
-						<p>Explore our various service offerings and see our openly-available and competitve pricing...</p>							
-					</article>
-				
-					<article>
-						<a href="protocols.html" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-						<header>
-							<h3><a href="protocols.html">Protocol Guides</a></h3>
-						</header>
-						<p>Explore our recommended protocols and overview of the bioinformatics pipeline we employ...</p>							
-					</article>
+			<p class="workflow-tagline">
+				PROVIDING THE COMPLETE MICROBIOME SEQUENCING WORKFLOW
+			</p>
+		</div>
+    </div>  
+</section>
 
-					<article>
-						<a href="submissions.html" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-						<header>
-							<h3><a href="submissions.html">Submit Your Samples</a></h3>
-						</header>
-						<p>Prepare your final samples submissions to the IMR and view the current processing queue...</p>							
-					</article>
 
+		<!-- Two -->
+
+		
+		<section class="counter-section wrapper">
+			<div class="inner">
+				<h1 class="counter-title">Your partner in microbiome sequencing since 2014</h1>
+
+				<div class="counters">
+					<div class="counter-grid-wrapper">
+						<div class="counter">
+							<img src="images/counter/samples trans.png" alt="Samples Icon" class="counter-icon">
+							<h1>><span data-count="300">0</span>k</h1>
+							<h3>Samples</h3>
+						</div>
+
+						<div class="counter">
+							<img src="images/counter/runs trans.png" alt="Samples Icon" class="counter-icon">
+							<h1><span data-count="135">0</span>0</h1>
+							<h3>Sequencing Runs</h3>
+						</div>
+
+						<div class="counter">
+							<img src="images/counter/clients trans.png" alt="Samples Icon" class="counter-icon">
+							<h1><span data-count="83">0</span>0</h1>
+							<h3>Clients</h3>
+						</div>
+
+						<div class="counter">
+							<img src="images/counter/countries trans.png" alt="Samples Icon" class="counter-icon">
+							<h1><span data-count="45">0</span></h1>
+							<h3>Countries</h3>
+						</div>	  
+					</div>
+				</div>
+			</div>
+			<script src="assets/js/counter.js"></script>
+		</section>
+
+<!-- Three -->
+			<section id="three" class="wrapper">
+				<div class="inner">
+					<header class="major">
+						<h2>Plan your project</h2>
+					</header>
+					
+					<div class="posts">
+						<section class="post">
+							<a href="wizard.html" class="image"><img src="images/wizard logo_trans_noText2.png" alt="" /></a>
+							<div class="content">
+								<h3><a href="wizard.html">Microbiome Sequencing Guide</a></h3>
+								<p>Try our new microbiome sequencing guide (aka:Wizard) to match your project goals with our sequencing options.</p>
+								<a href="wizard.html" class="button">More</a>
+							</div>
+						</section>
+						
+						
+						<section class="post">
+							<a href="protocols.html" class="image"><img src="images/protocols.png" alt="" /></a>
+							<div class="content">
+								<h3><a href="protocols.html">Protocols</a></h3>
+								<p>View detailed protocols used by the IMR in library preparation, sequencing, and analysis.</p>
+								<a href="protocols.html" class="button">More</a>
+							</div>
+						</section>
+						
+						<section class="post">
+							<a href="pricing.html" class="image"><img src="images/pricing.png" alt="" /></a>
+							<div class="content">
+								<h3><a href="pricing.html">Services and Pricing</a></h3>
+								<p>View pricing for our sequencing and bioinformatics services.</p>
+								<a href="pricing.html" class="button">More</a>
+							</div>
+						</section>
+
+						<section class="post">
+							<a href="queue.html" class="image"><img src="images/queue2 trans.png" alt="" /></a>
+							<div class="content">
+								<h3><a href="queue.html">Sequencing Queue</a></h3>
+								<p>View projected wait times and track the progress of your samples from library preparation, to seqeucing and analysis.</p>
+								<a href="queue.html" class="button">More</a>
+							</div>
+						</section>
+
+						<section class="post">
+							<a href="submissions.html" class="image"><img src="images/microplate trans.png" alt="" /></a>
+							<div class="content">
+								<h3><a href="submissions.html">Submission Guidelines</a></h3>
+								<p>See our instructions for sample submission.</p>
+								<a href="submissions.html" class="button">More</a>
+							</div>
+						</section>
+					
+						<section class="post">
+							<a href="submission_portal.html" class="image"><img src="images/submit samples2 trans.png" alt="" /></a>
+							<div class="content">
+								<h3><a href="submission_portal.html">Submission Portal</a></h3>
+								<p>Submit your samples here!</p>
+								<a href="submission_portal.html" class="button">More</a>
+							</div>
+						</section> 
+					</div>
 				</div>
 			</section>
-			
-		<!-- Footer -->
-			<div id="footer">
-							<!-- Copyright -->
-								<div class="copyright">
-									<ul class="menu">
-										<li>&copy; IMR(2014+). All rights reserved.</li><li>Design template: <a href="http://html5up.net" target="new">HTML5 UP</a></li>
+
+<!-- Three -->
+		<section id="three" class="wrapper tabs-section">
+				<div class="inner">
+					
+					<header class="major">
+						<h2 style="color: white;">Infrastructure and Equipment</h2>
+					</header>
+
+					<ul class="tabs">
+						<li>
+							<h3>Extraction and Library Prep</h3>
+							<div class="split">
+								<div class="content">
+									<ul>
+										<li>Bio-Rad PTC Tempo 96 thermocyclers (x6)</li>
+										<li>High-throughput QIAGEN QIAcubeHT extraction robot + QIAGEN TissueLyzer II for bead-beating</li>
+										<li>YourgeneHealth/CoastalGenomics-Hamilton Nimbus Select 96 liquid handling robot (size-selection+gel analytics)</li>
+										<li>QIAGEN QIAcuity dPCR (arriving January 2026)</li>
 									</ul>
 								</div>
-							
-			</div>
+								<div class="image"><img src="images/equipment/libprep.png" alt="" /></div>
+							</div>
+						</li>
+						<li>
+							<h3>Sequencing</h3>
+							<div class="split">
+								<div class="content">
+									<ul>
+										<li>Illumina MiSeq i100 (1st in Canada) - XLEAP chemistry, &lt;24 h runtimes</li>
+										<li>Illumina NextSeq2000 - XLEAP chemistry, &lt;48 h runtimes</li>
+										<li>PacBio Vega (1st in Canada) - HiFi long reads, &lt;48 h runtimes</li>
+									</ul>
+								</div>
+								<div class="image"><img src="images/equipment/sequencers2.png" alt="" /></div>
+							</div>
+						</li>
+
+						<li>
+							<h3>Analysis</h3>
+							<div class="split">
+								<div class="content">
+									<ul>
+										<li>Multiple HPC units + NAS</li>
+										<li>48-80 thread / 256-1500 Gb of RAM / ~15-200 Tb storage</li>
+										<li>192 total threads + ~0.5 petabytes storage</li>
+									</ul>
+								</div>
+								<div class="image analysis-image">
+									<img src="images/equipment/server3.png" alt="" />
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+
+<section id="about-us" class="wrapper scroll-target">
+    <div class="inner">
+		<h2 class="section-title">Our Team</h2>
+        <div class="member-list">
+            
+			<hr class="member-separator">
+
+            <div class="member-card">
+                <div class="member-photo-container">
+                    <img src="images/about_us/Morgan_sized.jpg" alt="Morgan G.I. Langille" class="member-photo">
+                </div>
+
+                <div class="member-info">
+					<h3 class="member-name">Morgan G.I. Langille, PhD</h3>
+					<p class="member-position">Director</p>
+
+					<div class="member-info-links">
+						<!--
+						<a href="#" target="_blank">
+							<span class="icon solid fa-user"></span>
+							CV
+						</a>-->
+						
+						<a href="https://scholar.google.ca/citations?user=jxThz9gAAAAJ&hl=en" target="_blank">
+							<span class="icon solid fa-file"></span>
+							Publications
+						</a>
+					</div>
+				</div>
+				
+                <div class="member-description">
+                    <p>Dr. Langille is a Professor in the Department of Pharmacology at Dalhousie University and co-founder and Director of the (IMR). He has been studying microbial communities since 2009 with his current focus on understanding human–microbial interactions and developing innovative bioinformatic tools to analyze microbiome data. As a Canada Research Chair in Human Microbiomics, Dr. Langille’s work integrates genomics, metagenomics, and bioinformatic analyses to support discoveries in health, disease, and precision medicine. He has led the development of widely used microbiome software tools, contributed extensively to the fields of microbiome bioinformatics and microbial genomics, and authored a large body of highly cited scientific publications. Outside of the lab, you will likely find him on the ice or bench, where he coaches and cheers on his three boys in hockey. </p>
+                </div>
+            </div>
+            
+            <hr class="member-separator">
+
+            <div class="member-card">
+                <div class="member-photo-container">
+                    <img src="images/about_us/Andre_sized.jpg" alt="André M. Comeau" class="member-photo">
+                </div>
+
+                <div class="member-info">
+					<h3 class="member-name">André M. Comeau, PhD</h3>
+					<p class="member-position">Manager</p>
+
+					<div class="member-info-links">
+						<a href="docs/AMComeauCV-Oct2025.pdf" target="_blank">
+							<span class="icon solid fa-user"></span>
+							CV
+						</a>
+						
+						<a href="http://scholar.google.ca/citations?hl=en&user=-K-N4ssAAAAJ" target="_blank">
+							<span class="icon solid fa-file"></span>
+							Publications
+						</a>
+					</div>
+				</div>
+
+                <div class="member-description">
+                    <p>Dr. Comeau is the co-founder and Manager of the IMR. An environmental and medical microbiologist, with a focus on ecology and microbial genome evolution, he completed his studies at Acadia University (BScH) and UBC (PhD), before completing post-docs with the CNRS (Toulouse, FR) and Université Laval (Québec). He participated in oceanographic expeditions along the coast of BC and the Canadian Arctic, and has characterized numerous novel bacteriophage genomes. He implemented NGS pipelines for sequencing and analysis on 454 technology in Québec before making the move to Dalhousie to help establish Illumina and PacBio pipelines at the IMR. Outside the IMR, he enjoys astro- and landscape photography, gaming, digital painting/design, and curling.</p>
+                </div>
+            </div>
+
+			<hr class="member-separator">
+
+            <div class="member-card">
+                <div class="member-photo-container">
+                    <img src="images/about_us/Nidhi_sized.jpg" alt="Nidhi Gohil" class="member-photo">
+                </div>
+
+                <div class="member-info">
+					<h3 class="member-name">Nidhi Gohil, PhD</h3>
+					<p class="member-position">Research Associate</p>
+
+					<div class="member-info-links">
+						<!--
+						<a href="#" target="_blank">
+							<span class="icon solid fa-user"></span>
+							CV
+						</a>-->
+						
+						<a href="https://scholar.google.com/citations?hl=en&user=9pedk8MAAAAJ" target="_blank">
+							<span class="icon solid fa-file"></span>
+							Publications
+						</a>
+					</div>
+				</div>
+
+                <div class="member-description">
+                    <p>Dr. Gohil is a Research Associate at the IMR, having joined in 2023 after a post-doc at the VIDO (Univ. of Sask.), where she focused on the population genomics of pathogens linked to STIs. She earned her PhD from Sardar Patel University (India), where she studied rumen metagenomics in Indian cattle. She also developed a virome enrichment method and gained experience with multiple NGS platforms (GS-FLX 454, Ion Torrent PGM, MiSeq. At the IMR, she oversees long-read sequencing using the Vega (PacBio) platform, leads R&D on complex/problematic samples, and develops SOPs. She is also deeply involved in analyzing clients' data and plays an integral role in testing and validating new bioinformatics tools for PacBio data in collaboration with others in the lab. Her passion for education is reflected in her supervision of students, where she shares her knowledge of NGS methods and techniques. Outside of her research, she enjoys exploring new places, photography, and music.</p>
+                </div>
+            </div>
+
+			<hr class="member-separator">
+
+            <div class="member-card">
+                <div class="member-photo-container">
+                    <img src="images/about_us/Dylan_sized.jpeg" alt="Dylan Quinn" class="member-photo">
+                </div>
+
+                <div class="member-info">
+					<h3 class="member-name">Dylan Quinn, PhD</h3>
+					<p class="member-position">Research Associate</p>
+
+					<div class="member-info-links">
+						<!--
+						<a href="#" target="_blank">
+							<span class="icon solid fa-user"></span>
+							CV
+						</a>-->
+						
+						<a href="https://scholar.google.ca/citations?view_op=list_works&hl=en&user=Rs_gx4AAAAAJ" target="_blank">
+							<span class="icon solid fa-file"></span>
+							Publications
+						</a>
+					</div>
+				</div>
+
+                <div class="member-description">
+                    <p>After completing a PhD in Neuroscience and Physiology, Dylan wanted to explore his interest in sequencing technology and bioinformatics and joined IMR in 2023. In addition to preparing samples for metagenomic sequencing, Dylan focuses on operations and sample throughput at the IMR by streamlining library preparation with liquid handlers, and the design internal business tools to optimize order submission and organization. Outside of the lab, Dylan enjoys the balance of working outdoors, where he runs a wild blueberry farm.</p>
+                </div>
+            </div>
+
+			<hr class="member-separator">
+
+			<div class="member-card">
+                <div class="member-photo-container">
+                    <img src="images/about_us/Alessi2_sized.jpg" alt="Alessi" class="member-photo">
+                </div>
+
+                <div class="member-info">
+                    <h3 class="member-name">Alessi Koto, MSc</h3>
+                    <p class="member-position">Research Associate</p>
+                </div>
+				
+                <div class="member-description">
+                    <p>Alessi has been a key part of the IMR team as a Microbiome Sequencing Technician since 2018. Her primary responsibilities are to receive, organize and store samples for microbiome profiling, prepare DNA sequencing libraries, load and monitor sequencing runs and retrieve files for researchers on multiple projects. Her background spans from Agriculture (Bsc.), to Microbiology and Immunology (MPhil), Entomology (Mosquito Research) and Microbiome studies (MSc.).</p>
+                </div>
+            </div>
+		</div>
+    </div>
+</section>	
+
+<footer id="footer">
+    <div class="content">
+        <div class="inner">
+            <section class="about">
+				<img src="images/logo_purple_whiteBG.png" alt="Integrated Microbiome Resource Logo" class="footer-logo">
+				<div class="logo-text">
+					<h3>Integrated Microbiome Resource</h3>
+					<p>Innovation through Collaboration</p>
+				</div>
+			</section>
+
+            <ul class="icons bulleted">
+                <li class="icon solid fa-map-marker-alt">
+                    <h3>Address</h3>
+                    <p>
+                    Dept. of Pharmacology<br/>
+                    Tupper Med. Bldg., Room 5D<br/>
+                    Dalhousie University<br/>
+                    5850 College Street<br/>
+                    Halifax, NS B3H 4R2</p>
+                </li>
+            </ul>
+            <ul class="icons bulleted">
+                <li class="icon solid fa-phone">
+                    <h3>Phone</h3>
+                    <p>(902) 494-2684</p>
+                </li>
+                <li class="icon solid fa-envelope">
+                    <h3>Email</h3>
+                    <p>imr@dal.ca</p>
+                </li>
+            </ul>
+        </div>
+        
+        <p class="copyright" style="width: 100%; text-align: center;">&copy; IMR (2014+). All rights reserved.</p>
+    </div>
+</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.selectorr.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>

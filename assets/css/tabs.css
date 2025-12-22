@@ -1,0 +1,275 @@
+/* ========================================= */
+/* Tabs Section Styling                      */
+/* ========================================= */
+
+
+.tabs-section .tabs-title {
+    display: inline-block;
+    padding: 0.6em 1.2em;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+
+    color: #ffffff;
+}
+
+
+
+.tabs-section {
+    background-image: 
+        linear-gradient(to bottom, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), /* Darker Overlay 1 */
+        url("images/overlay.png"),                                                 /* Pattern Overlay 2 */
+        linear-gradient(45deg, rgba(225, 229, 231, 0), rgba(89, 39, 175, 0)),      /* Color Gradient Overlay 3 */
+        url("../../images/DNA_test.png");                                          /* Background Image 4 */
+    
+    background-position: center center;
+    background-size: auto, auto, cover, cover;
+    background-attachment: fixed;
+    background-repeat: repeat, repeat, no-repeat, no-repeat;
+    background-color: rgba(21, 27, 33, 0.6); /* Fallback color */
+    color: white;
+}
+
+.tabs-title {
+    color: white;
+    padding: 1em;
+}
+
+.tabs {
+    margin: 0 0 2em 0;
+}
+
+.tabs .titles {
+    user-select: none;
+    list-style-type: none;
+    margin-bottom: -1px;
+    padding-left: 0;
+}
+
+/* Base Tab Styling (Consolidated) */
+.tabs .titles li {
+    transition: color 0.2s, background-color 0.2s;
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: 600; /* Pulled from later custom rule */
+    padding: 1em 3em;
+
+    /* Custom Look (Inactive Tabs Base) */
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    color: #DDDDDD;
+}
+
+.tabs .titles li:first-child {
+    /* Ensured 1px width for consistency */
+    border-left-width: 1px;
+}
+
+.tabs .titles li + .active {
+    margin-left: -1px;
+}
+
+/* Active Tab Styling (Consolidated) */
+.tabs .titles li.active {
+    background: rgba(255, 255, 255, 0.20);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25); /* Kept consistent 1px border */
+    border-bottom: none;
+}
+
+/* Target all <b> tags inside the paragraph within the .content div of the tabs-section */
+.tabs-section .content p b {
+    color: rgb(197, 157, 210); /* Change this to your desired color (e.g., a specific hex code or name) */
+    /* You can also add other styles here if needed, like: */
+    font-weight: 800; 
+}
+
+/* Target the paragraph inside the .content div within the tabs section */
+.tabs-section .content p {
+    font-size: 2em; /* Change this value to adjust the size (e.g., 1em, 1.1em, 16px) */
+    /* You can also adjust line height for better readability if the size is large */
+    line-height: 1.65;
+}
+
+/* All equipment <li> items inside the .content lists */
+
+.tabs-section .content ul {
+  margin: 0.75rem 0 0.75rem 1.25rem;
+  padding-left: 0.8rem;
+  list-style:disc;
+}
+
+.tabs-section .content ul > li {
+    font-size: 1.1em;
+    margin-bottom: 1.2rem; /* Adds space below each item */
+    font-weight: 400;
+}
+
+/* Tab Panel Styling (Consolidated) */
+.tabs .panels {
+    padding: 1.5em;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(12px);
+    border-radius: 0px 12px 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Tab Content Panel and Image */
+
+.tabs .panel {
+    /* Consolidated transition properties */
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+}
+
+.tabs .panel.active {
+    opacity: 1;
+}
+
+.tabs .panel .image {
+    margin-bottom: 0;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.tabs .panel .image img {
+    width: 100%;
+}
+
+
+/* ========================================= */
+/* Media Queries (Consolidated and Cleaned)  */
+/* ========================================= */
+
+@media screen and (max-width: 1280px) {
+    .tabs .titles li {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .tabs .panels {
+        padding: 2em 2em 0.1em 2em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tabs .titles li {
+        font-size: 0.8em;
+        padding: 1em;
+    }
+    .tabs .titles li.active {
+        padding-top: 1em;
+    }
+    .tabs .panels {
+        padding: 2em 2em 0.1em 2em;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .tabs .titles {
+        display: flex; /* Consolidated vendor prefixes */
+    }
+    .tabs .titles li {
+        flex: 1 1 0%; /* Consolidated flex-grow and flex-shrink */
+        text-align: center;
+    }
+    .tabs .titles li.active {
+        padding-top: 1em;
+    }
+}
+
+
+
+
+/* ========================================= */
+/* Split Layout (Consolidated and Cleaned)   */
+/* ========================================= */
+
+.split {
+    align-items: flex-start; /* Consolidated vendor prefixes */
+    display: flex;
+    margin-left: -1em;
+    margin-bottom: 0.5em;
+}
+
+.split > * {
+    margin-left: 2em !important;
+    width: 50%;
+}
+
+.split > * > :last-child {
+    margin-bottom: 0;
+}
+
+.split.centered {
+    align-items: center;
+}
+
+.split.style1 > *:nth-child(2n - 1) {
+    width: 33%;
+}
+
+.split.style1 > *:nth-child(2n) {
+    width: 67%;
+}
+
+@media screen and (max-width: 1280px) {
+    .split {
+        margin-left: -3.75em;
+    }
+    .split > * {
+        margin-left: 3.75em !important;
+    }
+    .split.centered {
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .split {
+        flex-direction: column;
+        margin-left: 0;
+    }
+    .split > * {
+        margin-left: 0 !important;
+        margin-top: 3.75em !important;
+        width: 100% !important;
+    }
+    .split > *:first-child {
+        margin-top: 0 !important;
+    }
+    .split.reversed {
+        flex-direction: column-reverse;
+    }
+    .split.reversed > * {
+        margin-bottom: 3.75em !important;
+        margin-top: 0 !important;
+    }
+    .split.reversed > *:first-child {
+        margin-bottom: 0 !important;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .split > * {
+        margin-top: 3em !important;
+    }
+    .split.reversed > * {
+        margin-bottom: 3em !important;
+    }
+}
+
+

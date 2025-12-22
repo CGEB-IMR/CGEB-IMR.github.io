@@ -1,0 +1,114 @@
+
+
+.counter-section {
+  /* CORRECTED: Changed 'top' to 'to bottom' for the first gradient in the standard line. */
+  background-image: linear-gradient(to bottom, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), /* Darker Overlay 1 */
+          url("images/overlay.png"),                                                 /* Pattern Overlay 2 */
+          linear-gradient(45deg, rgba(225, 229, 231, 0), rgba(89, 39, 175, 0)), /* Color Gradient Overlay 3 */
+          url("../../images/DNA_test.png");                                          /* Background Image 4 */
+  
+  /* Simplified properties using space-separated values for the four layers */
+  background-position: center center;
+  background-size: auto, auto, cover, cover;
+  background-attachment: fixed; /* Simplified: fixed is used for all layers */
+  background-repeat: repeat, repeat, no-repeat, no-repeat;
+  
+  /* Other properties */
+  background-color: rgba(21, 27, 33, 0.6); /* Fallback color */
+  color: #ffffff;
+		}
+
+.counter-title {
+  text-align: center;
+  color: #ffffff;
+  font-family: sans-serif;
+  padding: 2em 0em 0em 0em; 
+  font-size: 1.6em;
+  margin-left: auto;  /* Explicit centering */
+  margin-right: auto; /* Explicit centering */
+}
+
+.counters {
+  /* This is the outer container */
+  padding: 2em 0em 3em 0em;
+  background: none; 
+  color: #fff;
+  text-align: center;
+  margin-left: auto;  /* Explicit centering */
+  margin-right: auto; /* Explicit centering */
+}
+
+.counter-icon {
+    margin-bottom: 15px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.counter {
+  position: relative;
+  /* Removed: background, border, box-shadow, padding (frosted styles) */
+}
+
+/* Restore vertical divider line, if desired */
+.counter:not(:last-child)::before {
+  content: '';
+  background: #fff;
+  position: absolute;
+  width: 2px;
+  height: 3em;
+  top: 50%;
+  transform: translateY(-50%); 
+  right: -1em; /* Adjust this value if needed */
+}
+
+.counter h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  color: #ffffff;
+}
+
+.counter h3 {
+  color: #ffffff;
+}
+
+.counter-grid-wrapper {
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    padding: 2em;
+    
+    max-width: 100%;
+    margin: 0 auto; /* This centers the frosted box */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
+}
+
+@media screen and (max-width: 900px) and (min-width: 501px) {
+  .counters > div {
+    grid-template-columns: 1fr 1fr;
+  }
+  .counter:nth-child(2)::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .counters > div {
+    grid-template-columns: 1fr;
+    row-gap: 5em;
+  }
+  .counter:not(:last-child)::before {
+    width: 90%;
+    height: 2px;
+    top: initial;
+    right: initial;
+    bottom: -3em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+

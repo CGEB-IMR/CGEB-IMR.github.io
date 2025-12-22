@@ -1,191 +1,231 @@
 <!DOCTYPE HTML>
 <!--
-	Helios by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Archetype by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
 -->
 <html>
 	<head>
-		<title>Integrated Microbiome Resource (IMR)</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="Information and access to services provided by the Dalhousie University Integrated Microbiome Resource" />
-		<meta name="keywords" content="microbiome, Dalhousie, Halifax, NGS, 16S, 18S, metagenomics, metatranscriptomics, MiSeq, Illumina, PacBio" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>
-		<script src="js/jquery.scrolly.min.js"></script>
-		<script src="js/jquery.onvisible.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-			ga('create', 'UA-65099719-1', 'auto');
-			ga('send', 'pageview');
-
-		</script>
-
-		<script>
-			// Reduce the effect of FOUC (init.js always sets html display to block)
-			var html_el = document.getElementsByTagName('html')[0];
-			html_el.style.display = 'none';
-		</script>
-
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-noscript.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<title>Integrated Microbiome Resource</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/counter.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<link rel="stylesheet" href="assets/css/tabs.css" />
 	</head>
-	<body class="right-sidebar">
+	<body class="is-preload">
 
 		<!-- Header -->
-			<div id="header">
+			<header id="header" class="">
+				<h1 id="logo"><a href="index.html">
+					<img src="images/logo_purple_whiteBG.png" alt="IMR Logo" class="header-logo-img">
+				</a>
+				<a href="index.html">
+					<span class="logo-text">IMR</span>
+				</a>
+				</h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html#about-us">About Us</a></li>
+						<li><a href="achieve.html">Achievements</a></li>
+						<li><a href="submissions.html">Submission</a></li>
+						<li><a href="queue.html">Real-Time Queue</a></li>
+						<li><a href="pricing.html">Services/Pricing</a></li>
+						<li><a href="protocols.html">Protocols</a></li>
+						<li><a href="index.html#footer">Contact Us</a></li>
+					</ul>
+				</nav>
+			</header>
+	
+		
 
-				<!-- Inner -->
-					<div class="inner">
-						<header>
-							<h1>Integrated Microbiome Resource (IMR)</h1>
-						</header>
-					</div>
-				
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">About Us</a></li>
-							<li><a href="achieve.html">Achievements</a></li>
-							<li><a href="submissions.html">Submission Guidelines</a></li>
-							<li><a href="queue.html">Real-Time Queue</a></li>
-							<li><a href="pricing.html">Services/Pricing</a></li>
-							<li><a href="protocols.html">Protocols</a></li>
-							<li><a href="contact.html">Contact Us</a></li>
-						</ul>
-					</nav>
+<div class="floating-wrapper" id="floatingWrapper">
+    <a href="wizard.html" target="_blank" class="floating-button">
+        <button class="floating-close-btn" id="closeFloating">×</button>
+        
+        <img src="images/wizard logo_trans_noText2.png" alt="Sequencing Guide Wizard" />
+        <div class="button-text">
+            <p class="main-text">Need help choosing?</p>
+            <p class="sub-text">Try our sequencing guide!</p>
+        </div>
+    </a>
+</div>
 
-			</div>
-			
-		<!-- Main -->
-			<div class="wrapper style1">
+<!--styling for title is in custom.css-->
+<section class="wrapper">
+    <div class="inner">
+        <div class="title">
+            <h1>Submission Guidelines</h1>
+        </div>
 
-				<div class="container">
-					<div class="row 200%">
-						<div class="7u" id="content">
-							<article id="main">
-								<header>
-									<h2>Submission Guidelines</h2>
-								</header>
-								<section>
-									<h3 style="color:red">Note: Holiday closure of the IMR from Dec.20th-Jan.4th (inclusive) - last date for sample reception Friday Dec.19th.</font></h3><br>
-									<p>Once you have determined which sequencing (and targets, if amplicon) from our <a href="pricing.html"><b>Services</b></a> and <a href="protocols.html"><b>Protocols</b></a> pages that you want to do and you are ready to begin your submission to the IMR (consult our <a href="queue.html"><b>Real-Time Queue</b></a> to see processing times), follow the below instructions:
-										<ol>
-											<li>Ensure that your samples meet the <b>minimum requirements</b> posted on the right. Note there are no minimum samples numbers required (ie: even just 1 is accepted).
-											<li>Consult our new <b>Submission Portal</b> below for guidelines on which <b>consumables (plates/tubes)</b> you can use to prepare your shipment.
-											<li>Download the <b>Excel template</b> from the portal, complete it as instructed, and then upload it to complete your submission.
-											<li>You will then receive a <b>"Confirmation to Ship" email</b> from us once we have validated your submission. It will contain a copy of the below shipping instructions.
-											<li>If you encounter any problems, you can contact the <a href="mailto:andre.comeau@dal.ca"><b>IMR Manager</b></a> directly.
-										</ol>
-									<p><center><a href="submission_portal.html"><img src="images/SubmissionPortalLink.png" height="60" style="vertical-align:middle"></a></center>
-								</section>
-								<section>
-								<header>
-									<h3>Shipping Instructions</h3>
-								</header>
-									<ul class="default">
-										<li>Prepare your package for shipping - dry ice is not required for <b>extracted DNA</b> for such a short transit time (it is for <b>raw samples and RNA</b>), as it adds to your shipping costs, but you can use regular water-tight ice packs. Make sure to seal your plates/tubes in zip-lock bags to prevent them from getting wet.
-										<li>Our preferred shipper here at Dalhousie University is <b>FedEx</b>, but you can use other reputable couriers (<b>avoid DHL, if possible</b>). It is your responsibility to arrange and pay for your shipping.
-										<li>If <b>shipping internationally outside of Canada to the IMR</b>, follow the below important guidelines to avoid Canada Customs (and US Customs while transiting) clearance delays and prioritize sending packages on <b>Mondays</b> (to avoid weekends):
-										<br>&nbsp;&nbsp;1. A <b>Commercial Invoice</b> is required for all shipments - your local admin or courier can help with templates (often is done as a part of registering the shipment online).
-										<br>&nbsp;&nbsp;2. You must check the box that indicates <b>duties and taxes are billed to the consignee</b> (not sender) - you pay for shipping costs, but our broker covers any extra fees Customs levies.
-										<br>&nbsp;&nbsp;3. You must declare a <b>commercial value of $1</b> for Canada Customs and include (preferentially in an additional address line visible on the outside of the package) the following account to cover Customs charges: "Dalhousie grant# for Customs charges: DAL69318"
-										<br>&nbsp;&nbsp;4. You must declare the <b>host of origin for the DNA</b> on the descriptions (at least on the Commercial Invoice) - this is an additional Canada/US Customs requirement. For example, you may explicitly state that it is "DNA extracted from natural seawater, for research purposes only". If the DNA was extracted from human/animal materials (ex: stool), you need to state the samples are non-infectious (and be able to prove it) and should also state (if true/possible) that the subjects were pathogen-free/healthy at origin.
-										<br>&nbsp;&nbsp;5. Add the contact info for our <b>Customs Broker</b> (preferentially also visible on the outside of the package): "Dalhousie Customs Broker: Thompson Ahern / Tel: 519-250-0400"
-										<li>Address your shipment as below :
-										<br>&nbsp;&nbsp;<b>IMR (c/o Dr. André Comeau; Ph: 902-494-2684)
-										<br>&nbsp;&nbsp;Dept. of Pharmacology, room 5D
-										<br>&nbsp;&nbsp;Tupper Medical Building
-										<br>&nbsp;&nbsp;Dalhousie University
-										<br>&nbsp;&nbsp;5850 College St.
-										<br>&nbsp;&nbsp;Halifax NS B3H 4R2</b>
-										<li> Send your <b>tracking#</b> info to the <a href="mailto:andre.comeau@dal.ca"><b>IMR Manager</b></a>. You will receive a <b>"Samples Received" email</b> from us once we have confirmed your submission has arrived in good condition.
-									</ul>
-								</section>
-							</article>
-						</div>
-						<div class="5u" id="sidebar">
-							<section>
-								<header>
-									<h3>Sample Minimum Requirements</h3>
-								</header>
-								<p><table>
-									<tr><td bgcolor=#7030A0><b><i><font style="color:white">&nbsp;&nbsp;For amplicon sequencing (MiSeq/PacBio):</font></i></b>
-									<tr><td><ul class="default">
-										<li><b>Concentration:</b> >1 ng/&micro;L (preferrably >10 ng/&micro;L, dilute samples >200 ng/&micro;L); we do not re-quantify incoming DNAs for amplicon PCRs
-										<li><b>Volume:</b> 15 &micro;L of each sample (this volume is enough for two different targets, such as 16S + 18S; if selecting more targets, send 15 uL or more)
-										<li><b>Quality:</b> "clean" DNA coming from commercial kit or proven manual method; spec A260/230 preferrably >2.0
-										</ul>
-									<tr><td bgcolor=#0070C0><b><i><font style="color:white">&nbsp;&nbsp;For client-prepared pool sequencing (MiSeq/NextSeq/PacBio):</font></i></b>
-									<tr><td><ul class="default">
-										<li><b>Purified final library:</b> >1 ng/&micro;L (preferrably >10 ng/&micro;L) in at least 10 &micro;L; we re-quantify incoming libraries (not oligos below) using Qubit
-										<li>If using custom primers (Illumina amplicon pools only), provide 10 &micro;L each of Read1 + Read2 + Index primers at 100 &micro;M	
-										</ul>
-									<tr><td bgcolor=#FFC000><b><i>&nbsp;&nbsp;For genome sequencing (MiSeq/NextSeq):</i></b>
-									<tr><td><ul class="default">
-										<li><b>Concentration:</b> >1 ng/&micro;L (preferrably >10 ng/&micro;L); we re-quantify incoming DNAs using Qubit or Quant-iT
-										<li><b>Volume:</b> 10 &micro;L of each sample (15-20 &micro;L preferred)
-										<li><b>Eluant:</b> either 10 mM Tris-HCl (as close to pH 8 as possible) or water - no EDTA nor TE, if possible
-										<li><b>Quality:</b> spec A260/280 and A260/230 ratios as close to 1.8 and 2.0 as possible (or over), since library prep (Nextera Flex) is sensitive to DNA quality
-										</ul>
-									<tr><td bgcolor=#FFC000><b><i>&nbsp;&nbsp;For genome sequencing (PacBio):</i></b>
-									<tr><td><ul class="default">
-										<li><b>Concentration:</b> 10-33 ng/&micro;L of high-molecular weight DNA (90% >7 kb); we re-quantify incoming DNAs using Qubit or Quant-iT
-										<li><b>Volume:</b> 150-300 ng in 15 &micro;L into assay for each sample + 15 &micro;L for redo (if available) + 5 &micro;L for QC
-										<li><b>Eluant:</b> either 10 mM Tris-HCl (as close to pH 8 as possible) or water - no EDTA nor TE, if possible
-										<li><b>Quality:</b> spec A260/280 and A260/230 ratios as close to 1.8 and 2.0 as possible (or over), since library prep (PacBio) is <b>very</b> sensitive to DNA quality
-										</ul>
-									<tr><td bgcolor=#C00000><b><i><font style="color:white">&nbsp;&nbsp;For metagenomic sequencing (NextSeq):</font></i></b>
-									<tr><td><ul class="default">
-										<li>Same as NextSeq genomes above
-										</ul>
-									<tr><td bgcolor=#C00000><b><i><font style="color:white">&nbsp;&nbsp;For metagenomic sequencing (PacBio):</font></i></b>
-									<tr><td><ul class="default">
-										<li>Same as PacBio genomes above
-										</ul>
-									<tr><td bgcolor=#538135><b><i><font style="color:white">&nbsp;&nbsp;For (meta)transcriptomics (NextSeq):</i></b>
-									<tr><td><ul class="default">
-										<li><b>Concentration:</b> >4 ng/&micro;L (preferrably >10 ng/&micro;L); we re-quantify incoming RNAs using Qubit or Quant-iT
-										<li><b>Volume:</b> 25 &micro;L of each sample (50 &micro;L preferred in case of redos)
-										<li><b>Quality:</b> RIN should ideally be 8 or above, but successful library prep is still possible with samples with RIN values ~3-8.
-										</ul>
-									<tr><td bgcolor=#538135><b><i><font style="color:white">&nbsp;&nbsp;For Iso-Seq transcripts (PacBio):</i></b>
-									<tr><td><ul class="default">
-										<li><b>For Poly-A selected cDNA</b> = same as PacBio genome requirements above.
-										<li><b>For raw RNA</b> = <font style="color: red;">Inquire!</font>
-										</ul>
-									</table>
-								</p>
-							</section>
-						</div>
-					</div>
+        <div class="submission-content-wrapper">
+                    <div class="row gtr-200">
+                        
+                        <div class="col-7 col-12-medium submission-main-content">
+                            <article id="main">
+                                <p>Once you have determined which sequencing (and targets, if amplicon) from our <a href="pricing.html"><b>Services</b></a> and <a href="protocols.html"><b>Protocols</b></a> pages that you want to do and you are ready to begin your submission to the IMR (consult our <a href="queue.html"><b>Real-Time Queue</b></a> to see processing times), follow the below instructions:
+                                    <section>
+                                        <ol>
+                                            <li>Ensure that your samples meet the <b>minimum requirements</b> posted on the right. Note there are no minimum samples numbers required (ie: even just 1 is accepted).</li>
+                                            <li>Consult our new <b>Submission Portal</b> below for guidelines on which <b>consumables (plates/tubes)</b> you can use to prepare your shipment.</li>
+                                            <li>Download the <b>Excel template</b> from the portal, complete it as instructed, and then upload it to complete your submission.</li>
+                                            <li>You will then receive a <b>"Confirmation to Ship" email</b> from us once we have validated your submission. It will contain a copy of the below shipping instructions.</li>
+                                            <li>If you encounter any problems, you can contact the <a href="mailto:andre.comeau@dal.ca"><b>IMR Manager</b></a> directly.</li>
+                                        </ol>
+                                        <p style="text-align: center;"><a href="submission_portal.html"><img src="images/SubmissionPortalLink.png" height="60" style="vertical-align:middle" alt="Link to Submission Portal"></a></p>
+                                    </section>
+                                
+                                <section>
+                                    <header>
+                                        <h3>Shipping Instructions</h3>
+                                    </header>
+                                    <ul class="default submission-shipping-list">
+                                        <li>Prepare your package for shipping - dry ice is not required for <b>extracted DNA</b> for such a short transit time (it is for <b>raw samples and RNA</b>), as it adds to your shipping costs, but you can use regular water-tight ice packs. Make sure to seal your plates/tubes in zip-lock bags to prevent them from getting wet.</li>
+                                        <li>Our preferred shipper here at Dalhousie University is <b>FedEx</b>, but you can use other reputable couriers (<b>avoid DHL, if possible</b>). It is your responsibility to arrange and pay for your shipping.</li>
+                                        <li>If <b>shipping internationally outside of Canada to the IMR</b>, follow the below important guidelines to avoid Canada Customs (and US Customs while transiting) clearance delays and prioritize sending packages on <b>Mondays</b> (to avoid weekends):
+                                            <br>&nbsp;&nbsp;1. A <b>Commercial Invoice</b> is required for all shipments - your local admin or courier can help with templates (often is done as a part of registering the shipment online).
+                                            <br>&nbsp;&nbsp;2. You must check the box that indicates <b>duties and taxes are billed to the consignee</b> (not sender) - you pay for shipping costs, but our broker covers any extra fees Customs levies.
+                                            <br>&nbsp;&nbsp;3. You must declare a <b>commercial value of $1</b> for Canada Customs and include (preferentially in an additional address line visible on the outside of the package) the following account to cover Customs charges: "Dalhousie grant# for Customs charges: "
+                                            <br>&nbsp;&nbsp;4. You must declare the <b>host of origin for the DNA</b> on the descriptions (at least on the Commercial Invoice) - this is an additional Canada/US Customs requirement. For example, you may explicitly state that it is "DNA extracted from natural seawater, for research purposes only". If the DNA was extracted from human/animal materials (ex: stool), you need to state the samples are non-infectious (and be able to prove it) and should also state (if true/possible) that the subjects were pathogen-free/healthy at origin.
+                                            <br>&nbsp;&nbsp;5. Add the contact info for our <b>Customs Broker</b> (preferentially also visible on the outside of the package): "Dalhousie Customs Broker: Thompson Ahern / Tel: 519-250-0400"
+                                        </li>
+                                        <li>Address your shipment as below :
+                                            <br>&nbsp;&nbsp;<b>IMR (c/o Dr. André Comeau; Ph: 902-494-2684)
+                                            <br>&nbsp;&nbsp;Dept. of Pharmacology, room 5D
+                                            <br>&nbsp;&nbsp;Tupper Medical Building
+                                            <br>&nbsp;&nbsp;Dalhousie University
+                                            <br>&nbsp;&nbsp;5850 College St.
+                                            <br>&nbsp;&nbsp;Halifax NS B3H 4R2</b>
+                                        </li>
+                                        <li> Send your <b>tracking#</b> info to the <a href="mailto:andre.comeau@dal.ca"><b>IMR Manager</b></a>. You will receive a <b>"Samples Received" email</b> from us once we have confirmed your submission has arrived in good condition.
+                                    </ul>
+                                </section>
+                            </article>
+                        </div>
+                        
+                        <div class="col-5 col-12-medium submission-sidebar">
+                            <section class="sample-requirements">
+                                <header>
+                                    <h3>Sample Minimum Requirements</h3>
+                                </header>
+                                <p><table>
+                                    <tr><td class="req-header amplicon"><b><font style="color:white">&nbsp;&nbsp;For amplicon sequencing (MiSeq/PacBio):</font></b></td></tr>
+                                    <tr><td><ul class="default">
+                                        <li><b>Concentration:</b> >1 ng/&micro;L (preferrably >10 ng/&micro;L, dilute samples >200 ng/&micro;L); we do not re-quantify incoming DNAs for amplicon PCRs</li>
+                                        <li><b>Volume:</b> 15 &micro;L of each sample (this volume is enough for two different targets, such as 16S + 18S; if selecting more targets, send 15 uL or more)</li>
+                                        <li><b>Quality:</b> "clean" DNA coming from commercial kit or proven manual method; spec A260/230 preferrably >2.0</li>
+                                    </ul></td></tr>
+                                    <tr><td class="req-header client-pool"><b><font style="color:white">&nbsp;&nbsp;For client-prepared pool sequencing (MiSeq/NextSeq/PacBio):</font></b></td></tr>
+                                    <tr><td><ul class="default">
+                                        <li><b>Purified final library:</b> >1 ng/&micro;L (preferrably >10 ng/&micro;L) in at least 10 &micro;L; we re-quantify incoming libraries (not oligos below) using Qubit</li>
+                                        <li>If using custom primers (Illumina amplicon pools only), provide 10 &micro;L each of Read1 + Read2 + Index primers at 100 &micro;M</li>
+                                    </ul></td></tr>
+                                    <tr><td class="req-header wgs-miseq"><b>&nbsp;&nbsp;For genome sequencing (MiSeq/NextSeq):</b></td></tr>
+                                    <tr><td><ul class="default">
+                                        <li><b>Concentration:</b> >1 ng/&micro;L (preferrably >10 ng/&micro;L); we re-quantify incoming DNAs using Qubit or Quant-iT</li>
+                                        <li><b>Volume:</b> 10 &micro;L of each sample (15-20 &micro;L preferred)</li>
+                                        <li><b>Eluant:</b> either 10 mM Tris-HCl (as close to pH 8 as possible) or water - no EDTA nor TE, if possible</li>
+                                        <li><b>Quality:</b> spec A260/280 and A260/230 ratios as close to 1.8 and 2.0 as possible (or over), since library prep (Nextera Flex) is sensitive to DNA quality</li>
+                                    </ul></td></tr>
+                                    <tr><td class="req-header wgs-pacbio"><b>&nbsp;&nbsp;For genome sequencing (PacBio):</b></td></tr>
+                                    <tr><td><ul class="default">
+                                        <li><b>Concentration:</b> 10-33 ng/&micro;L of high-molecular weight DNA (90% >7 kb); we re-quantify incoming DNAs using Qubit or Quant-iT</li>
+                                        <li><b>Volume:</b> 150-300 ng in 15 &micro;L into assay for each sample + 15 &micro;L for redo (if available) + 5 &micro;L for QC</li>
+                                        <li><b>Eluant:</b> either 10 mM Tris-HCl (as close to pH 8 as possible) or water - no EDTA nor TE, if possible</li>
+                                        <li><b>Quality:</b> spec A260/280 and A260/230 ratios as close to 1.8 and 2.0 as possible (or over), since library prep (PacBio) is <b>very</b> sensitive to DNA quality</li>
+                                    </ul></td></tr>
+                                    <tr><td class="req-header metag"><b><font style="color:white">&nbsp;&nbsp;For metagenomic sequencing (NextSeq):</font></b></td></tr>
+                                    <tr><td><ul class="default">
+                                        <li>Same as NextSeq genomes above</li>
+                                    </ul></td></tr>
+                                    <tr><td class="req-header metag"><b><font style="color:white">&nbsp;&nbsp;For metagenomic sequencing (PacBio):</font></b></td></tr>
+                                    <tr><td><ul class="default">
+                                        <li>Same as PacBio genomes above</li>
+                                    </ul></td></tr>
+                                    <tr><td class="req-header rnaseq"><b><font style="color:white">&nbsp;&nbsp;For (meta)transcriptomics (NextSeq):</font></b></td></tr>
+                                    <tr><td><ul class="default">
+                                        <li><b>Concentration:</b> >4 ng/&micro;L (preferrably >10 ng/&micro;L); we re-quantify incoming RNAs using Qubit or Quant-iT</li>
+                                        <li><b>Volume:</b> 25 &micro;L of each sample (50 &micro;L preferred in case of redos)</li>
+                                        <li><b>Quality:</b> RIN should ideally be 8 or above, but successful library prep is still possible with samples with RIN values ~3-8.</li>
+                                    </ul></td></tr>
+                                    <tr><td class="req-header rnaseq"><b><font style="color:white">&nbsp;&nbsp;For Iso-Seq transcripts (PacBio):</font></b></td></tr>
+                                    <tr><td><ul class="default">
+                                        <li><b>For Poly-A selected cDNA</b> = same as PacBio genome requirements above.</li>
+                                        <li><b>For raw RNA</b> = <font style="color: red;">Inquire!</font></li>
+                                    </ul></td></tr>
+                                </table></p>
+                            </section>
+                        </div>
+                        
+                    </div>
+                </div>
+    </div>
+</section>
+
+<footer id="footer">
+    <div class="content">
+        <div class="inner">
+            <section class="about">
+				<img src="images/logo_purple_whiteBG.png" alt="Integrated Microbiome Resource Logo" class="footer-logo">
+				<div class="logo-text">
+					<h3>Integrated Microbiome Resource</h3>
+					<p>Innovation through Collaboration</p>
 				</div>
+			</section>
 
-			</div>
+            <ul class="icons bulleted">
+                <li class="icon solid fa-map-marker-alt">
+                    <h3>Address</h3>
+                    <p>
+                    Dept. of Pharmacology<br/>
+                    Tupper Med. Bldg., Room 5D<br/>
+                    Dalhousie University<br/>
+                    5850 College Street<br/>
+                    Halifax, NS B3H 4R2</p>
+                </li>
+            </ul>
+            <ul class="icons bulleted">
+                <li class="icon solid fa-phone">
+                    <h3>Phone</h3>
+                    <p>(902) 494-2684</p>
+                </li>
+                <li class="icon solid fa-envelope">
+                    <h3>Email</h3>
+                    <p>imr@dal.ca</p>
+                </li>
+            </ul>
+        </div>
+        
+        <p class="copyright" style="width: 100%; text-align: center;">&copy; IMR (2014+). All rights reserved.</p>
+    </div>
+</footer>
 
-		<!-- Footer -->
-			<div id="footer">
-							<!-- Copyright -->
-								<div class="copyright">
-									<ul class="menu">
-										<li>&copy; IMR (2014+). All rights reserved.</li><li>Design template: <a href="http://html5up.net" target="new">HTML5 UP</a></li>
-									</ul>
-								</div>
-							
-			</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+            <script>
+            // Check if card was previously closed in this session
+            if (sessionStorage.getItem('floatingCardClosed') === 'true') {
+                document.getElementById('floatingWrapper').style.display = 'none';
+            }
+
+            document.getElementById('closeFloating').addEventListener('click', (event) => {
+                event.preventDefault();
+                
+                // Hide the wrapper
+                document.getElementById('floatingWrapper').style.display = 'none';
+                
+                // Store the closed state for this session
+                sessionStorage.setItem('floatingCardClosed', 'true');
+            });
+        </script>
 
 	</body>
 </html>

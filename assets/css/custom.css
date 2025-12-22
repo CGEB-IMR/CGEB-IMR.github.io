@@ -1,0 +1,1627 @@
+/* ==================================== */
+/* Styling common to multiple pages */
+/* ==================================== */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title {
+    padding: 0 1em; 
+    padding-top: 6em;   /* for spacing with nav bar */
+    align-items: center;          /* 2. Vertically align items in the middle */
+    justify-content: space-between; /* 3. Push items (h1 and a.download-link) to opposite ends */
+}
+
+.title h1 {
+    font-size: 2.75em;
+    color: #660066;
+    margin: 0; /* Remove default margin for better alignment */
+    padding: 0;
+    margin-right: 2em; /* <--- ADD THIS to set the gap */
+    flex-grow: 0; /* Allows h1 to take up available space */
+    text-transform: none;
+    font-weight: 700;
+    text-align: left;
+}
+
+.title-subtitle {
+    font-size: 1.2em;
+    color: #555;
+    margin: 1.5em 0 1.5em 0; 
+    display: flex;
+    align-items: flex-end; 
+    justify-content: flex-start; /* Keep everything on the left */
+}
+
+/* Custom Link Styling (Applies to all <a> tags globally) */
+
+a {
+    color: #660066; 
+    text-decoration: none; 
+    font-weight: bold;
+}
+
+a:hover {
+    color: #993399; 
+    text-decoration: underline;
+}
+
+/* ==================================== */
+/* Index page: */
+/* ==================================== */
+
+/* Get the style properties from your actual header links (e.g., nav a) */
+.logo-text {
+    font-family: Arial, sans-serif; 
+    font-size: 1em;               
+    color: #660066;              
+    font-weight: bold;            
+    text-decoration: none;        
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* Ensure the h1 container keeps the logo and text on one line */
+#logo {
+    display: flex;
+    align-items: center; 
+}
+
+/* Custom styling for the header logo image */
+.header-logo-img {
+    width: 45px; 
+    height: 45px;
+    border-radius: 50%;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 0px;
+    padding: 3px; 
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+}
+
+/* Banner */
+
+#banner {
+    position: relative; 
+    min-height: 70vh;
+    height: 35em;
+    overflow: hidden; 
+}
+
+/* This pseudo-element sits on top of the video but behind the text */
+#banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, rgba(54, 53, 55, 0.1), rgba(43, 42, 44, 0.1));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 2; 
+}
+
+/* --- 3. Style the Video Element --- */
+.video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the video */
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover; /* Prevents the video from stretching or squishing */
+    z-index: 1; 
+}
+
+/* --- 4. Ensure Content is on Top --- */
+#banner .content {
+    position: relative; /* Must be relative, absolute, or fixed for z-index to work */
+    z-index: 3; /* Places the content on the very top layer */
+}
+
+/* Media Query: Adjust size and position on smaller screens */
+@media screen and (max-width: 768px) {
+    .banner-logo {
+        top: 2em;       /* Position near the top */
+        left: 50%;      /* Center horizontally */
+        transform: translateX(-50%); /* Fine-tune centering */
+        width: 100px;   /* Smaller size on mobile */
+        height: 100px;
+        padding: 10px;
+    }
+}
+
+/* --- 5. Style and Position the Frosted Intro Box --- */
+/* Make sure #banner can be a positioning context */
+#banner {
+    position: relative;
+}
+
+/* --- 5. Style and Position the Frosted Intro Box --- */
+.intro-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5em 6em 1.5em 10em; 
+    text-align: left;
+    background: rgba(255, 255, 255, 0.10); 
+    backdrop-filter: blur(1px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    z-index: 4;
+    box-sizing: border-box;
+}
+
+/* Ensure title and paragraph inside the box are styled correctly */
+.intro-box h2 {
+    color: #fff; 
+    margin-top: 0; 
+    margin-bottom: 0.5em;
+}
+
+.intro-box p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 0; 
+}
+
+.intro-box p b,
+.intro-box p strong {
+    color: #FFFFFF; 
+    font-weight: 800; 
+}
+
+
+/* Media Query for screens 768px wide or less */
+@media screen and (max-width: 768px) {
+    .intro-box {
+        left: 0;
+        right: 0;
+        width: 100%; /* Ensure full width */
+        padding: 1.5em; /* Overall padding */
+        background: rgba(255, 255, 255, 0.10); /* Frosted effect */
+        backdrop-filter: blur(1px);
+        box-sizing: border-box;
+    }
+
+    /* Add left padding for text */
+    .intro-box h2,
+    .intro-box p {
+        padding-left: 1em; /* Adjust as needed */
+    }
+
+    .intro-box h2 {
+        font-size: 1.3em;
+    }
+
+    .intro-box p {
+        font-size: 0.95em;
+        line-height: 1.5;
+    }
+}
+
+/* Even smaller screens */
+@media screen and (max-width: 480px) {
+    .intro-box {
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 1em; /* Slightly smaller padding */
+        background: rgba(255, 255, 255, 0.10);
+        backdrop-filter: blur(1px);
+        box-sizing: border-box;
+    }
+
+    /* Add left padding for text */
+    .intro-box h2,
+    .intro-box p {
+        padding-left: 0.5em; /* Minimal padding for mobile */
+    }
+
+    .intro-box h2 {
+        font-size: 1.2em;
+    }
+
+    .intro-box p {
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+}
+
+
+
+/* --- 6. Style and Position the Announcements Box (Top Right) --- */
+.announcements-box {
+    position: absolute; 
+    top: 25%;           /*adjust spacing from top here*/
+    right: 5%;          
+    transform: none; 
+    width: 380px;       
+    max-width: 90%;     
+    padding: 1.2em; 
+    text-align: left; 
+    background: rgba(255, 255, 255, 0.8); /* Subtle 95% opacity */ 
+    backdrop-filter: none; /* Remove blur as it won't work on white */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    color: #444444; 
+    z-index: 4; 
+    border-radius: 6px;
+}
+
+.announcements-box h2 {
+    color: #660066; 
+    margin-top: 0; 
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    border-bottom: 1px solid #BBBBBB; 
+    padding-bottom: 0.3em;
+}
+
+.announcements-box ul {
+    list-style-type: disc; 
+    margin: 0;
+    padding-left: 1.25em;
+}
+
+.announcements-box li {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-bottom: 1em; 
+}
+
+.announcements-box li strong {
+    color: #333333; 
+    font-weight: 700;
+}
+
+
+/* --- Media Query for Mobile (Adjust position and inner spacing) --- */
+@media screen and (max-width: 768px) {
+  .announcements-box {
+    /* Keep it above the intro box */
+    top: auto;
+    bottom: 18em;
+
+    /* Center the box with your existing approach */
+    right: 50%;
+    transform: translateX(50%);
+
+    /* Make sure padding is generous on small screens */
+    padding: 1rem 1.25rem;            /* top/bottom 1rem, sides 1.25rem */
+    box-sizing: border-box;
+  }
+
+  /* Give the list a bit more room from the left edge */
+  .announcements-box ul {
+    /* Use logical property so it works in all writing modes */
+    padding-inline-start: 1.5rem;     /* increases left padding for bullets */
+    margin: 0;                        /* ensure no negative margins */
+    list-style-position: outside;     /* bullets sit outside the content box */
+  }
+
+  /* Space out each item a touch more */
+  .announcements-box li {
+    padding-left: 0.125rem;           /* subtle extra gap between bullet and text */
+    margin-bottom: 0.9em;             /* keep your spacing consistent */
+  }
+
+  /* Keep heading comfortable from the left edge too */
+  .announcements-box h2 {
+    padding-left: 2rem;            /* avoids heading touching the border */
+    margin-top: 0;
+  }
+}
+
+/* Even smaller screens */
+@media screen and (max-width: 480px) {
+  .announcements-box {
+    padding: 0.875rem 1rem;           /* slightly smaller, still roomy */
+  }
+
+  .announcements-box ul {
+    padding-inline-start: 1.25rem;    /* adjust to fit the tighter space */
+  }
+
+  .announcements-box li {
+    padding-left: 0.125rem;
+  }
+
+  .announcements-box h2 {
+    padding-left: 0.25rem;
+    font-size: 1.05em;                /* keep the box tidy on very small screens */
+  }
+}
+
+
+/* ---------------------
+   WORKFLOW SECTION 
+--------------------------- */
+
+/* 1. Main container holding link, image, and tagline */
+.full-width-image-container {
+    position: relative;
+    z-index: 1;
+}
+
+.pricing-link {
+    display: inline-block;        /* inline-block so width matches text */
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #660066;
+    text-decoration: none;
+    margin: 0 0 0em 0;
+    transition: color 0.2s;
+}
+
+.pricing-link:hover {
+    color: #993399;  /* lighter purple */
+}
+
+/* 4. Image styling */
+.full-width-image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+}
+
+.workflow-labels {
+    margin-left: 0;
+    position: relative;
+    z-index: 2;
+    width: max-content;
+    text-align: left;
+    margin-top: 1.5em;
+}
+
+/* 5. Tagline BELOW the image (centered under the pricing link) */
+.workflow-tagline {
+    position: relative;
+    left: 0;        
+    right: 0;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #660066;
+    text-transform: uppercase;
+    text-align: left;        /* center to line up with pricing-link above */
+    width: 100%;
+    max-width: 1200px;         /* optional: restrict line-length on very wide screens */
+    margin-inline: auto;       /* center the block within the page */
+    margin-top: -1em;
+}
+
+@media screen and (max-width: 768px) {
+    
+    /* 1. Centering the Tagline (.workflow-tagline) */
+    .workflow-tagline {
+        /* This centers the text inside the <p> element */
+        text-align: center;
+        /* Ensure the element itself is centered (needed if using position:static/relative) */
+        margin-inline: auto;
+    }
+    
+    /* 2. Centering the Pricing Link Container (.workflow-labels) */
+    .workflow-labels {
+        text-align: center; /* This centers the inline text *inside* the div */
+        /* FIX 2: These 3 rules are NECESSARY to center an absolutely positioned element */
+        left: 50%;
+        transform: translateX(-50%);
+        width: max-content; /* Ensure the div only takes up the width of its content */
+    }
+}
+
+/* about us section */-------------------------
+.section-title {
+    color: #660066; 
+    font-size: 1.5em; 
+    font-weight: 700;
+    margin-bottom: 0.5em; 
+}
+
+#about-us.wrapper {
+    padding-top: 0em; /* Reduce the wrapper's top padding for this section only */
+}
+
+/* Align title left on larger screens */
+@media screen and (min-width: 768px) {
+    .section-title {
+        text-align: left;
+    }
+}
+
+/* Ensure the inner container works as expected */
+#about-us .inner {
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 3em 0; /* Add vertical padding */
+}
+
+/* Member Card (Mobile/Stacked - Default) */
+.member-card {
+    display: flex; /* Use flex to align items vertically on mobile */
+    flex-direction: column; 
+    align-items: center; /* Center the photo and text block on mobile */
+    text-align: center; /* Center text within the blocks */
+    padding: 0 0; /* Vertical space between the separator and content */
+}
+
+.member-photo-container {
+    /* Set a consistent size for the photo area */
+    width: 120px; 
+    height: 120px;
+    margin-bottom: 1em; /* Space between photo and name/position */
+}
+
+.member-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Create the circular crop */
+    object-fit: cover; /* Ensure the image fills the circle without distortion */
+    display: block;
+}
+
+.member-info {
+    margin-bottom: 0em; /* Space between name/position and description */
+}
+
+.member-name {
+    color: #660066;
+    font-size: 1.25em;
+    margin: 0;
+}
+
+.member-position {
+    color: #535254; 
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.member-description {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the description block */
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.member-separator {
+    border: 0;
+    height: 2px;
+    background-color: #e0e0e0; 
+    margin: 0; 
+    padding:0;
+}
+
+/* Media Query for Larger Screens (Horizontal Layout) */
+
+@media screen and (min-width: 768px) {
+    
+    .member-card {
+        /* Revert to horizontal layout on larger screens */
+        display: grid;
+        /* Define the grid columns: Photo, Info, Description */
+        grid-template-columns: 120px 200px 1fr; /* 120px photo | 200px name/position | rest for description */
+        gap: 30px; /* Space between columns */
+        align-items: start; /* Align elements to the top */
+        text-align: left; /* Revert text alignment to left */
+        padding: 2em 0 0.5em 0; /* More vertical space */
+    }
+
+    /* Reset alignment for horizontal layout */
+    .member-photo-container,
+    .member-info,
+    .member-description {
+        margin: 0;
+    }
+    
+    /* Place elements into the defined grid columns */
+    .member-photo-container {
+        grid-column: 1 / 2; /* Column 1 */
+    }
+
+    .member-info {
+        grid-column: 2 / 3; /* Column 2 */
+        /* Make position text smaller than the description for better vertical flow */
+        margin-top: 5px; /* Slight adjustment to align with photo */
+    }
+
+    .member-description {
+        grid-column: 3 / 4; /* Column 3 */
+    }
+}
+
+/* --- Member Profile Links (CV/Publications) --- */
+
+/* Container for the links, placed in the second grid column (.member-info) */
+.member-info-links {
+    display: flex; 
+    gap: 1.25em; /* Space between the two link items */
+    margin-top: 0.75em; /* Space below the Director/Manager title */
+    
+    /* Default (Mobile): Center the links below the text block */
+    justify-content: center;
+}
+
+.member-info-links a {
+    text-decoration: none; 
+    color: #660066; /* Match the primary purple color for links */
+    font-weight: 500;
+    font-size: 0.9em; 
+    white-space: nowrap; 
+}
+
+.member-info-links a:hover {
+    color: #8c008c; /* Slightly lighter purple on hover */
+}
+
+.member-info-links a .icon {
+    /* Styles the Font Awesome icon */
+    margin-right: 0.3em; 
+    font-size: 1.1em; 
+    vertical-align: middle; 
+    color: #660066; /* Icon color matches link color */
+}
+
+/* --- Media Query Adjustments for Desktop (>= 768px) --- */
+
+@media screen and (min-width: 768px) {
+    
+    .member-info-links {
+        /* Desktop: Align links to the left, matching the name/position text */
+        justify-content: flex-start; 
+    }
+}
+
+
+/* ========================================= */
+/* Protocols page     */
+/* ========================================= */
+
+/* This rule constrains ONLY the text-focused content */
+.protocol-text-block {
+    max-width: 70em; /* Limits the width of all enclosed text */
+    margin: 2em auto;  /* Centers the text block */
+    padding: 0 1em;    /* Ensures mobile padding */
+}
+
+/* We must also align any content that is a direct child of the text block wrapper, 
+   like your H1 and H3 headers */
+.protocol-text-block > h1, 
+.protocol-text-block > section {
+    /* Reset these to flow naturally within the new 1100px wrapper */
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Primers table section   */
+
+/* Descriptive selector: Targets the section by its purpose */
+.primer-table-section {
+    max-width: 1200px; /* Allow the table container to be wider */
+    width: 100%;
+    margin: 2em auto;
+    padding: 0 1em;
+}
+
+/* Ensure the table itself fills the width of its 1300px container */
+.primer-table-section .primers {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+}
+
+/* --- Primer Table Font Size Controls (custom.css) --- */
+
+/* 1. Overall Table Text Size */
+/* This sets the base font size for all text inside the table (.primers) */
+.primers {
+    font-size: 0.9em; /* Example: 90% of the normal body font size */
+    line-height: 1.4; /* Improve readability */
+    /* Ensures borders between cells are merged, simplifies removal */
+    border-collapse: collapse; 
+    border-spacing: 0;
+}
+
+/* 2. Main Table Header Rows (Target/Region/Source/Coverages) */
+/* Targets all text inside the table header cells (<th>) */
+.primers th {
+    font-size: 0.8em; /* Example: Slightly larger or back to 100% */
+    font-weight: bold;
+    /* You already have bold in HTML, but this ensures it */
+    padding: 8px 10px;
+}
+
+/* 3. Subheadings (e.g., "Standard Ribosomal RNA targets") */
+/* Targets the <h3> elements you used for sub-categories */
+.primers h3 {
+    font-size: 1.1em; /* Example: Noticeably larger than the data text */
+    font-weight: 700;
+    margin: 0.5em 0 0.2em 0; /* Control vertical spacing */
+    text-transform: none;
+}
+
+/* 4. Primer/Data Cells (The main content) */
+/* Targets text in the standard table data cells (<td>) */
+.primers td {
+    font-size: 0.8em; /* Example: Slightly smaller for the detailed data */
+}
+
+/* --- Row Hover Effect --- */
+.primers tbody tr {
+    transition: background-color 0.2s ease-in-out;
+}
+
+.primers tbody tr:hover {
+    /* Ensures the hover background is strong enough to cover anything residual */
+    background-color: rgba(220, 220, 220, 0.5); 
+    cursor: pointer;
+}
+
+/* 5. Smallest Text (e.g., Superscript/Footnotes) */
+/* Targets the text inside the <a> tags (Source links) to keep them legible */
+.primers td a {
+    font-size: 0.85em; /* Example: Can make the source links smaller */
+}
+
+/* Targets the last six columns (the percentage coverage data) in the primer table */
+.primers tr td:nth-child(n + 6) {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* --- Bounding Box for the Primer Table Section --- */
+.primer-table-section {
+    max-width: 1300px;
+    width: 100%;
+    margin: 2em auto;
+    
+    /* ADD BORDER AND ROUNDED CORNERS */
+    border: 1px solid #e0e0e0; /* A light, subtle gray border */
+    border-radius: 8px; /* Adjust this value for more or less curve */
+    
+    /* Add internal padding so the table isn't flush against the border */
+    padding: 1.5em; 
+    
+    /* Ensures the shadow and border are calculated correctly */
+    box-sizing: border-box; 
+    
+    /* Optional: Slight shadow for a 'lifted' look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); 
+}
+
+/* Cleanup for the inner table */
+.primer-table-section .primers {
+    /* Remove any margin the table might have had internally */
+    margin: 0;
+}
+
+
+/* ========================================= */
+/* Queue page   */
+/* ========================================= */
+
+/* ========================================= */
+/* Queue page   */
+/* ========================================= */
+
+.queue-block {
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 0 1em;
+}
+
+.queue-iframe {
+    width: 100%;
+    border: 0;
+    min-height: 110vh;
+    height: auto;
+}
+
+/* Show desktop version by default, hide mobile */
+.queue-desktop {
+    display: block;
+}
+
+.queue-mobile {
+    display: none;
+}
+
+/* On small screens (768px and below), show mobile version and hide desktop */
+@media screen and (max-width: 768px) {
+    .queue-desktop {
+        display: none;
+    }
+    
+    .queue-mobile {
+        display: block;
+        min-height: 800px; /* Adjust this based on your mobile app's needs */
+    }
+}
+
+/* Optional: Further adjust for very small screens */
+@media screen and (max-width: 480px) {
+    .queue-mobile {
+        min-height: 600px;
+    }
+}
+
+
+/* ========================================= */
+/* Submission Portal page   */
+/* ========================================= */
+
+.portal-block {
+    max-width: 1300px; /* Limits the width of all enclosed text */
+    margin: 1em auto;  /* Centers the text block */
+    padding: 4em 1em;    /* Ensures mobile padding */
+    position: relative;
+    z-index: 0;
+    background: #fff;
+    isolation: isolate; /* This prevents iframe from affecting outside styles */
+}
+
+/* ========================================= */
+/* Wizard page   */
+/* ========================================= */
+
+.wizard-block {
+    max-width: 1300px; /* Limits the width of all enclosed text */
+    margin: 1em auto;  /* Centers the text block */
+    padding: 0 1em;    /* Ensures mobile padding */
+    position: relative;
+    z-index: 0;
+    background: #fff;
+    isolation: isolate; /* This prevents iframe from affecting outside styles */
+}
+
+/* ========================================= */
+/* Achievements page     */
+/* ========================================= */
+
+/* Achievements Page Description */
+.page-description {
+    font-size: 1.2em;
+    color: #555;
+    margin: 1.5em 0 0em 0; 
+}
+
+/* 1. Universal Content Wrapper for Achievements Page */
+.achievements-content-wrapper {
+    /* Removed max-width and centering - now handled by .inner */
+    margin-top: 2em;
+    /* Removed padding - .inner handles horizontal spacing */
+}
+
+/* 2. Styling for the Map Containers */
+.map-container {
+    background-color: #fff;
+    margin: 0 0 2em 0;
+    text-align: center;
+    width: 100%; /* Explicitly set to fill the .inner container */
+    max-width: 100%; /* Prevent overflow */
+}
+
+.sample-types-container {
+    max-width: 50em; 
+    margin: 0 auto; /* This centers the container */
+}
+
+.sample-types-container img {
+    display: block; /* Makes the image a block element */
+    margin: 0 auto; /* Centers the image within the container */
+    max-width: 100%;
+    height: auto;
+}
+
+/* 3. Ensure the iframes (maps) fill their container */
+.map-container iframe {
+    max-width: 100%;
+    width: 100%; /* Make iframe fill the container */
+}
+
+/* 4. Responsive images in map containers */
+.map-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Styling for the Sample Types header (H2) */
+.sample-types-header {
+    font-size: 1.3em;
+    text-transform: none;
+    color: #000000;
+    text-align: left; /* Center the heading text */
+    margin: 2em 0 1em 0; 
+    
+    /* Removed max-width and auto margins - .inner handles this */
+}
+
+/* ========================================= */
+/* Pricing page     */
+/* ========================================= */
+
+
+.scroll-target {
+    scroll-margin-top: 90px;
+}
+
+.wizard-highlight {
+    background-color: #fdfcd9;        
+    padding: 10px 10px 0px 10px;                     
+    border-radius: 5px;
+    transition: background-color 0.5s ease;
+    box-shadow: 0 0 0 2px rgba(102, 0, 102, 0.08), 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Wrapper so the close button can sit above the floating button */
+.floating-wrapper {
+    position: fixed;
+    top: calc(4.5em + 16px); /* header height + gap on desktop*/ 
+    right: 40px;
+    z-index: 11000;
+}
+
+.floating-button {
+    /* Fixed positioning */
+    position: relative;
+    z-index: 1000;
+   
+    /* Container styling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(126, 58, 142, 0.2);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    max-width: 180px;
+}
+
+.floating-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(126, 58, 142, 0.3);
+}
+
+/* Style the image within the link */
+.floating-button img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 8px;
+    box-shadow: 0 4px 12px rgba(126, 58, 142, 0.15);
+}
+
+/* Text styling */
+.floating-button .button-text {
+    text-align: center;
+}
+
+.floating-button .main-text {
+    color: #7e3a8e;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+    line-height: 1.3;
+}
+
+.floating-button .sub-text {
+    color: #2d3748;
+    font-size: 13px;
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.floating-close-btn {
+    position: absolute;
+    /* Move the button to the top-right corner of the *wrapper* */
+    top: -12px;     /* Push slightly above the card to the corner */
+    right: -12px;   /* Push slightly to the right of the card */
+    
+    /* Styling for the close circle */
+    background: white;
+    border: none;
+    border-radius: 50%; /* Make it circular */
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    width: 28px;        /* Explicit width/height for a perfect circle */
+    height: 28px;
+    padding: 0;
+    color: #444;
+    z-index: 2000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow to make it pop */
+    
+    /* Center the 'x' inside the button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Remove this redundant and confusing hover rule */
+/* .floating-close-btn:hover { background: #5f2c6d; } */
+
+
+.floating-close-btn:hover {
+    color: #7e3a8e; /* optional: purple hover */
+}
+
+
+----------------
+
+
+.pricing-table-wrapper { 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px;
+}
+
+
+
+/* New style for the wrapper containing the h1 and the download link */
+.title-row {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+    width: 100%; /* Ensure the row spans the full width of .title */
+    margin-bottom: 1em; /* Add some space below this row before the subtitle */
+}
+
+/* Ensure the text content is correctly aligned within the flex container */
+.title-subtitle span {
+    line-height: 1.5; /* Good practice for readability */
+}
+
+.title-subtitle a {
+    color: #660066; 
+    font-weight: bold; 
+}
+
+.title-subtitle a:hover {
+    color: #993399; 
+    text-decoration: underline; 
+}
+
+.title-subtitle {
+    color: #3e3d3e;
+    font-weight: 500;
+}
+
+.download-link {
+    display: inline-flex;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #660066; 
+    text-decoration: none; 
+    margin-bottom: 0.1em; 
+    flex-shrink: 0; /* Prevents the link from shrinking */
+}
+
+.download-link .fa {
+    margin-right: 8px;
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+.pricing-page-content h2 {
+    font-size:1.5em;
+    text-transform: none;
+    color: #660066; 
+    padding: 0.1em 1em;
+    margin: 0 0 0.8em 0;
+    border-radius: 5px;
+}
+
+
+
+
+
+/* h2 fill colors*/
+
+.announcements-section h2 {
+    background-color: #767171; 
+    color: #fff;   
+}
+
+.pricing-amplicon h2 {
+    background-color: #660066; 
+    color: #fff;   
+}
+
+.pricing-metag h2 {
+    background-color: #AF2318; 
+    color: #fff;
+}
+
+.pricing-wgs h2 {
+    background-color: #F5C343;
+    color: black
+}
+
+.pricing-client-pool h2 {
+    background-color: #306EBA;
+    color: #fff;
+}
+
+.pricing-rnaseq h2 { 
+    background-color: #5E803F;
+    color: #fff;
+}
+
+.pricing-extraction h2 {
+    background-color: #800020; 
+    color: #fff;
+}
+
+.pricing-bioinformatics h2 {
+    background-color: #1ba597;
+    color: white; 
+}
+
+.pricing-page-content p {
+    font-size:1.1em;
+    text-transform: none;
+    color: #555;
+    font-weight: normal;
+    padding: 0 1.5em;
+}
+
+/* NEW UNIVERSAL RULE: Targets ALL direct child <div> elements within the main content wrapper. */
+/* This assumes all your main sections (announcements, amplicon, metag) are direct children. */
+
+.pricing-page-content .pricing-table-wrapper {
+  margin: 2em 0;          /* restore vertical gaps between tables */
+}
+
+
+/* UNIVERSAL TABLE BASE (Applied to .amplicon-table, .metag-table, etc.) */
+.pricing-table-universal {
+    /* Use 'alt' class structure to get borders on all cells */
+    border-collapse: separate; 
+    text-align: center;
+    width: 100%; /* Ensure table fills the wrapper */
+}
+
+/* UNIVERSAL CAPTION STYLING  */
+.pricing-table-universal caption {
+    font-size: 1.1em;       
+    font-weight: bold;      
+    color: #555;            
+    text-transform: none;
+    padding: 0.9em 0; 
+    text-align: center;
+    caption-side: top;
+    background-color: #fff; 
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin: 0; 
+    width:100%;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1); /* SEPARATOR LINE */
+}
+
+/* UNIVERSAL CELL PADDING AND ALIGNMENT */
+.pricing-table-universal td, 
+.pricing-table-universal th {
+    /* Override template's padding for a slightly tighter fit */
+    padding: 0.4em 0.5em; 
+    vertical-align: middle;
+}
+
+/* UNIVERSAL HEADER STYLING (Targets all TH in all tables) */
+.pricing-table-universal thead th {
+    font-size: 1.1em; 
+    font-weight: bold;
+    color: #555; 
+    border: none;
+    text-align: center; 
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #d3d3d3;  
+}
+
+/* UNIVERSAL DATA CELL STYLING (Targets all TD in the body) */
+.pricing-table-universal tbody td {
+    font-size: 1em;       
+    font-weight: normal;  
+    color: #555;          
+    border: none;
+}
+
+/* UNIVERSAL ROW HOVER EFFECT */
+.pricing-table-universal tbody tr {
+    transition: background-color 0.2s ease-in-out;
+    border-color: rgba(144, 144, 144, 0.25);
+}
+
+.pricing-table-universal tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.05); 
+    color: inherit; 
+    cursor: pointer; 
+}
+
+.price-header-academic {
+    background-color: rgba(224, 224, 237, 0.8); 
+    border-left: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+.price-header-commercial {
+    background-color: rgba(187, 218, 255, 0.8); 
+    border-left: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-wrapper .announcements-list {
+    /* Remove default list styling (bullets and padding) */
+    list-style-type: none;
+    margin: 0; 
+    padding: 0; 
+    background-color: #fff; 
+    color: #555;
+    font-size: 1em;
+    padding: 0em 0.5em 0em 0.5em; 
+}
+
+.announcement-wrapper .announcements-list li {
+    margin-bottom: 0.55em; 
+}
+
+.announcement-card {
+  background: #fff;                         /* white card surface */
+  border: 1px solid #ddd;                   /* same subtle border as tables */
+  border-radius: 8px;                       /* same corner radius */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);/* same shadow depth */
+  padding: 1rem 1.25rem;                    /* comfortable inner spacing */
+  margin: 1.25rem 0;                        /* breathing room around the card */
+}
+
+.section-spacer {
+    height: 5em; 
+    width: 100%;
+}
+
+/* Spacing for client prepaired pool table */
+
+.client-pool-table thead th:nth-child(-n+7) {
+    /* Targets the first 7 columns (Pool Type through Samples/Run) */
+    width: 11%; /* Each of these 7 columns gets ~11% width (7 x 11% = 77%) */
+}
+.client-pool-table thead th:nth-child(8), 
+.client-pool-table thead th:nth-child(9) {
+    /* Targets the last 2 columns (Academic and Commercial Price) */
+    width: 11.5%; /* Each gets ~11.5% (2 x 11.5% = 23%) */
+}
+
+
+/* Notes section heading styled like other h2 bands */
+.pricing-notes h2 {
+  font-size: 1.5em;
+  text-transform: none;
+  color: #fff;
+  padding: 0.1em 1em;
+  margin: 0 0 0.8em 0;
+  border-radius: 5px;
+  background-color: #767171; /* same grey as Announcements */
+}
+
+
+
+/* Match Notes paragraphs to other non-table p styles */
+.pricing-notes .pricing-footnotes p {
+  font-size: 1.1em;        /* same as .pricing-page-content p */
+  color: #555;             /* same text color */
+  font-weight: normal;
+  text-transform: none;
+  padding: 0 1.5em;        /* same horizontal padding */
+  margin: 0 0 0.8em 0;     /* consistent spacing between paragraphs */
+  line-height: 1.6;        /* good readability */
+}
+
+
+/* When a section is highlighted, let the caption show the highlight */
+.wizard-highlight .pricing-table-universal caption {
+  background-color: transparent;          /* or use a soft tint: rgba(255, 252, 170, 0.65) */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+
+/* Rule to enforce horizontal scrolling on small screens */
+@media screen and (max-width: 980px) {
+    /* Force visibility on all parent containers */
+    .wrapper,
+    .wrapper > .inner,
+    .pricing-page-content,
+    .pricing-amplicon,
+    .pricing-metag,
+    .pricing-wgs,
+    .pricing-client-pool,
+    .pricing-rnaseq,
+    .pricing-extraction,
+    .pricing-bioinformatics {
+        overflow: visible;
+        max-width: 100%;
+    }
+    
+    /* Target the table wrapper specifically */
+    .pricing-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        overflow-y: hidden; 
+        width: 100%;
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    /* Force tables to be wider than mobile screens */
+    .pricing-table-universal {
+        min-width: 800px;
+        width: 800px;
+        display: table;
+    }
+    
+    /* Prevent cells from wrapping */
+    .pricing-table-universal td,
+    .pricing-table-universal th {
+        white-space: nowrap;
+    }
+
+}
+
+/* Override template table borders */
+.pricing-table-universal td,
+.pricing-table-universal th {
+  border: none;
+  box-shadow: none;
+}
+
+.pricing-table-universal {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.pricing-table-wrapper {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+@media print {
+  /* Page margins */
+  @page {
+    margin: 0.5in;
+  }
+
+  /* Hide non-print elements */
+  #header,
+  .section-spacer,
+  #footer,
+  .title a.download-link,
+  .announcements-section,
+  .pricing-footnotes {
+    display: none;
+  }
+
+  /* Compact main area */
+  .pricing-page-content {
+    font-size: 60%;
+    width: 100%;
+    max-width: none;
+    margin-top: 1.5em;
+  }
+
+  /* Title clean-up */
+  .title {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 0;
+  }
+  .title h1 {
+    font-size: 20pt;
+    margin-bottom: 0.5em;
+    padding: 0;
+    padding-top: 0;
+  }
+  /* Hide subtitle */
+  .title p.title-subtitle {
+    display: none;
+  }
+
+  /* Headings without color backgrounds; keep with table */
+  .pricing-page-content h2 {
+    background-color: transparent;
+    color: black;
+    padding: 0.2em 0;
+    margin-top: 0;
+    text-align: left;
+    page-break-after: avoid;
+  }
+
+  /* Global color reset for print */
+  body {
+    background: white;
+    color: black;
+    padding-top: 0;
+  }
+
+  /* Print URLs next to link text */
+  a:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* Wrapper: remove decorations; ensure no clipping */
+  .pricing-table-wrapper {
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible !important;           /* fix: don't clip right edge */
+    page-break-inside: avoid;               /* try to keep whole block together */
+  }
+
+  /* Table compression: allow natural sizing and break across pages if needed */
+  .pricing-table-universal {
+    width: 100% !important;                 /* fix: beat mobile 800px width */
+    min-width: 0 !important;                /* fix: beat mobile min-width:800px */
+    table-layout: auto;
+    border-collapse: separate;              /* match your screen model */
+    border-spacing: 0;
+    page-break-inside: avoid;               /* try to keep table together */
+  }
+  .pricing-table-universal caption {
+    page-break-inside: avoid;
+  }
+
+  /* Remove template row borders; you draw your own if desired */
+  .pricing-table-universal thead,
+  .pricing-table-universal tfoot,
+  .pricing-table-universal tbody tr {
+    border: none;
+  }
+
+  /* Tighter cells for print */
+  .pricing-table-universal th,
+  .pricing-table-universal td {
+    padding: 0.25em 0.4em;
+    line-height: 1.2;
+    font-size: 9pt;
+  }
+
+  /* Allow wrapping and breaking so the table can shrink on paper */
+  .pricing-table-universal th,
+  .pricing-table-universal td {
+    white-space: normal !important;         /* fix: override screen nowrap */
+    word-break: break-word;                 /* break long strings/URLs */
+  }
+
+  /* If you want specific columns to stay compact (optional):
+     Keep price and small numeric columns tight. Adjust nth-child as needed. */
+  .price-header-academic,
+  .price-header-commercial {
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  /* Optional: lighter borders for readability in print
+     (comment these out if you prefer borderless) */
+  .pricing-table-universal thead th {
+    border-bottom: 1px solid #d3d3d3;
+  }
+  .pricing-table-universal tbody td {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+  .pricing-table-universal tbody td + td,
+  .pricing-table-universal thead th + th {
+    border-left: 1px solid rgba(0,0,0,0.08);
+  }
+}
+
+/* ========================================= */
+/* Submissions page     */
+/* ========================================= */
+
+/* 1. Global Wrapper: Max-width and Centering (similar to Achievements/Pricing) */
+.submission-content-wrapper {
+    max-width: 70em;
+    margin: 2em auto; /* Space above/below and center the content */
+    padding: 0 1em;   /* Horizontal padding */
+}
+
+/* 1. Define the Row Container */
+.submission-content-wrapper .row {
+    display: flex;
+    flex-wrap: wrap; 
+    /* gtr-200 suggests a very large gutter, let's use a large margin-offset */
+    margin: 0 -2em; 
+    box-sizing: border-box;
+}
+
+/* 2. Base Column Styling (Applying the gutter padding) */
+.submission-content-wrapper .row > div {
+    /* Match the negative margin in the row */
+    padding: 0 2em; 
+    box-sizing: border-box;
+}
+
+/* 3. Define the Column Widths */
+.submission-content-wrapper .col-7 {
+    width: 58.333%; /* 7 / 12 */
+}
+
+.submission-content-wrapper .col-5 {
+    width: 41.666%; /* 5 / 12 */
+}
+
+/* 4. Media Query for Medium Breakpoint (col-12-medium) */
+@media screen and (max-width: 980px) {
+    /* col-12-medium means these columns go full width on medium screens */
+    .submission-content-wrapper .col-12-medium {
+        width: 100%; 
+        margin: 1em 0;
+        padding: 0 2em;
+    }
+}
+
+/* 2. Main Content Area Adjustments */
+.submission-main-content ol {
+    /* Reduce margin top/bottom for list items */
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+/* 3. Shipping Instructions List Styling */
+.submission-shipping-list li {
+    margin-bottom: 0.5em;
+}
+
+/* 4. Sample Requirements Table Styling */
+
+/* Make the requirements table borderless and match the theme style */
+.sample-requirements table {
+    border-collapse: collapse; 
+    width: 100%;
+    /* Add a box shadow to the entire table block for a clean look (similar to map containers) */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Style the colored header rows */
+.sample-requirements .req-header {
+    font-size: 1.1em;
+    padding: 0.5em 0.8em;
+    border: none; 
+    font-style: italic;
+    font-weight: bold;
+}
+
+.sample-requirements header h3 {
+    /* Set a custom margin to reduce the space below it */
+    margin-bottom: 0em; /* Adjust this value (e.g., 0.5em) until the spacing looks correct */
+}
+
+/* Apply the specific colors from the old page to the new header classes */
+.sample-requirements .amplicon { background-color: #7030A0; } /* Dark Purple */
+.sample-requirements .client-pool { background-color: #0070C0; } /* Dark Blue */
+.sample-requirements .wgs-miseq,
+.sample-requirements .wgs-pacbio {
+    background-color: #FFC000; /* Yellow/Orange */
+    color: #000 !important; /* Force black text */
+}
+.sample-requirements .metag { background-color: #C00000; } /* Dark Red */
+.sample-requirements .rnaseq { background-color: #538135; } /* Dark Green */
+
+
+/* Style the body rows (the list of requirements) */
+.sample-requirements td {
+    border: none;
+    padding: 0.5em 0.8em 1em 0.8em;
+    vertical-align: top;
+}
+
+/* Style the list inside the table cells */
+.sample-requirements ul.default {
+    list-style: disc;
+    margin-left: 1.5em;
+}
+
+/* Target the lists inside the requirements table */
+.submission-sidebar .sample-requirements ul.default {
+    list-style: disc; /* Keeps the list style (dots) */
+    margin-left: 1.5em; /* Keeps the indentation */
+    
+    /* Adjust this property to control the space *below* each list */
+    margin-bottom: 0.3em; /* Example: use 0.5em for less space, or 1.5em for more */
+    
+    /* Ensure no top margin is pushing it away from the header above it */
+    margin-top: 0.3em; 
+}
+
+/* Increase font size for the list items inside the requirements table */
+.submission-sidebar .sample-requirements ul.default li {
+    font-size: 1.2em; /* Adjust this value (e.g., 1.05em or 1.1em) */
+    line-height: 1.5; /* Good for readability */
+}
+
+/* Optional: You may also want to increase the font size of the text within the colored headers */
+.sample-requirements .req-header b {
+    font-size: 1em; /* Make the header text slightly larger than the lists */
+}
+
+/* ========================================= */
+/* Footer     */
+/* ========================================= */
+
+#footer .about {
+    /* Apply Flexbox to align the logo and text horizontally */
+    display: flex;
+    /* Vertically center the items relative to each other */
+    /* use flex-start if I want to top align with other text)*/
+    align-items: center;
+    
+}
+
+#footer .footer-logo {
+    display: block;
+    margin-top: 0;
+    margin-right: 1.5em; 
+    max-width: 100px; 
+    background-color: white;
+    /* 2. Set the container to a perfect square and add internal spacing */
+    width: 80px;  /* Explicit width for the square container */
+    height: 80px; /* Explicit height, MUST match width for a circle */
+    padding: 4px; /* Space inside the circle to push the image inward */
+    border-radius: 50%;
+    object-fit: contain; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#footer .logo-text {
+    /* Allow the text container to take up the remaining horizontal space */
+    flex-grow: 1; 
+    /* Prevent shrinking if space is tight */
+    flex-shrink: 0;
+}
+
+#footer .about h3 {
+    margin-bottom: 0.25em;
+    margin: 0; 
+    color: white;
+    font-size: 1.1em;
+}
+
+#footer .about p {
+    margin: 0; 
+    color: rgba(255, 255, 255, 0.7);
+    transform: none;
+    font-weight: 100;
+}
+
+#footer .icons.bulleted li h3 {
+    font-size: 1.1em; /* Adjust this value as needed */
+}
+
+/* --- Mobile/Responsive Adjustment Override --- */
+@media screen and (max-width: 980px) {
+    #footer .footer-logo {
+        /* Ensure the logo remains aligned left and has a right margin on smaller screens */
+        margin-left: 0;
+        margin-right: 1.5em; 
+    }
+}

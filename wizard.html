@@ -10,7 +10,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/counter.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
+		<link rel="stylesheet" href="assets/css/tabs.css" />
 	</head>
 	<body class="is-preload">
 
@@ -36,38 +38,15 @@
 				</nav>
 			</header>
 
-		<!-- Main -->
-	
-
-<!--styling for title is in pricing css-->		
-<section class="wrapper">
-    <div class="inner">
-		<div class="title">
-			<h1>Real-Time Sample Queue</h1>
-			<p class="title-subtitle">Real-time project/sample information is available in the queue display below. This allows you to monitor the progress of your samples through the IMR workflow. In order to offer as flexible (and economical) a service as possible to the community, clients do not have to fill complete runs. The main way sequencing is done is that your samples are mixed with other clients - this may take a bit longer (primarily for NextSeq/PacBio runs - MiSeq runs are always full) in the pipeline as we wait for the remainder of the run slots to be filled by other projects/individuals. Dalhousie clients (since internal) and Commercial clients (since they help subsidize for academics by paying a premium) receive queue priority, but for external academics, in cases of important deadlines, there are some options for expediting your service (contact us).</p>
-		</div>
-
-		<h3 style="text-align:center">Queue Status: <span style="color:red">Sample volume is currently low - see estimated delays below under each platform tab.</span></h3>
-
+	<div class="wizard-block">
+		<iframe
+			src="https://dalimr.retool.com/embedded/public/72aa282b-f3c2-4002-b7d2-0c533e024b99"
+			width="100%"
+			height="2000"
+			style="display:block; border:none; position:relative; z-index:1;">
+		</iframe>
 	</div>
-</section>
 
-		<div class="queue-block">
-			<!-- Desktop version -->
-			<iframe 
-				src="https://dalimr.retool.com/embedded/public/8a16833a-d2a3-4c98-886e-895a7b0e22cd" 
-				class="queue-iframe queue-desktop"
-				width="100%">
-			</iframe>
-			
-			<!-- Mobile version -->
-			<iframe 
-				src="https://dalimr.retool.com/embedded/public/14462c6c-ac46-4f7d-845b-1b30b83db6ed" 
-				class="queue-iframe queue-mobile"
-				width="100%">
-			</iframe>
-		</div>
-			
 
 <footer id="footer">
     <div class="content">
