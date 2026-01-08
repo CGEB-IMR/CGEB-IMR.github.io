@@ -194,9 +194,9 @@ a:hover {
     }
 
     /* Add left padding for text */
-    .intro-box h2,
-    .intro-box p {
-        padding-left: 1em; /* Adjust as needed */
+    #banner .intro-box h2,
+    #banner .intro-box p {
+        padding-left: 1.5em; /* Adjust as needed */
     }
 
     .intro-box h2 {
@@ -302,9 +302,9 @@ a:hover {
   }
 
   /* Give the list a bit more room from the left edge */
-  .announcements-box ul {
+  #banner .announcements-box ul {
     /* Use logical property so it works in all writing modes */
-    padding-inline-start: 1.5rem;     /* increases left padding for bullets */
+    padding-inline-start: 2rem;     /* increases left padding for bullets */
     margin: 0;                        /* ensure no negative margins */
     list-style-position: outside;     /* bullets sit outside the content box */
   }
@@ -316,7 +316,7 @@ a:hover {
   }
 
   /* Keep heading comfortable from the left edge too */
-  .announcements-box h2 {
+  #banner .announcements-box h2 {
     padding-left: 2rem;            /* avoids heading touching the border */
     margin-top: 0;
   }
@@ -417,6 +417,14 @@ a:hover {
         left: 50%;
         transform: translateX(-50%);
         width: max-content; /* Ensure the div only takes up the width of its content */
+    }
+
+    #main .pricing-link {
+        font-size: 1.1em;  /* Down from 1.5em */
+    }
+
+    #main .workflow-tagline {
+        font-size: 1.1em;  /* Down from 1.5em */
     }
 }
 
@@ -1618,10 +1626,25 @@ a:hover {
 }
 
 /* --- Mobile/Responsive Adjustment Override --- */
-@media screen and (max-width: 980px) {
-    #footer .footer-logo {
-        /* Ensure the logo remains aligned left and has a right margin on smaller screens */
-        margin-left: 0;
-        margin-right: 1.5em; 
-    }
+@media screen and (max-width: 768px) {
+  #footer .about {
+    flex-direction: column;  /* Stack logo and text vertically */
+    align-items: flex-start;  /* Align to left */
+  }
+  
+  #footer .logo-text {
+    width: 100%;  /* Take full width */
+    max-width: 100%;
+  }
+  
+  #footer .logo-text h3 {
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.3em;  /* Tighter line spacing */
+    font-size: 1em;  /* Slightly smaller */
+  }
+  
+  #footer .footer-logo {
+    margin-bottom: 1.5em;  /* Add space below logo */
+  }
 }
