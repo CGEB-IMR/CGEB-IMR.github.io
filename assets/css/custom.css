@@ -83,6 +83,14 @@ a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
 }
 
+/* Make header logo smaller on mobile */
+@media screen and (max-width: 768px) {
+    .header-logo-img {
+        width: 33px;  /* Adjust this value - default is 45px */
+        height: 33px;
+    }
+}
+
 /* Banner */
 
 #banner {
@@ -716,10 +724,12 @@ a:hover {
     margin: 0;
 }
 
-
-/* ========================================= */
-/* Queue page   */
-/* ========================================= */
+/* Adjust left padding for primer table title on mobile only */
+@media screen and (max-width: 768px) {
+    .primer-table-section h3 {
+        padding-left: 1.5em; /* Adjust this value as needed */
+    }
+}
 
 /* ========================================= */
 /* Queue page   */
