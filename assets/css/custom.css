@@ -975,14 +975,46 @@ a:hover {
     align-items: center;
 }
 
-/* Remove this redundant and confusing hover rule */
-/* .floating-close-btn:hover { background: #5f2c6d; } */
-
-
 .floating-close-btn:hover {
     color: #7e3a8e; /* optional: purple hover */
 }
 
+/* Mobile adjustments for floating wizard button */
+@media screen and (max-width: 768px) {
+    .floating-wrapper {
+        top: calc(4.5em + 8px); /* Reduce gap on mobile */
+        right: 15px; /* Move closer to edge */
+    }
+    
+    .floating-button {
+        max-width: 140px; /* Reduce from 180px */
+        padding: 8px; /* Reduce from 10px */
+        gap: 6px; /* Reduce from 8px */
+    }
+    
+    .floating-button img {
+        width: 70px; /* Reduce from 100px */
+        height: 70px;
+        padding: 6px; /* Reduce from 8px */
+    }
+    
+    .floating-button .main-text {
+        font-size: 13px; /* Reduce from 15px */
+        margin: 0 0 4px 0; /* Reduce from 6px */
+    }
+    
+    .floating-button .sub-text {
+        font-size: 11px; /* Reduce from 13px */
+    }
+    
+    .floating-close-btn {
+        width: 24px; /* Reduce from 28px */
+        height: 24px;
+        font-size: 18px; /* Reduce from 20px */
+        top: -10px; /* Adjust position */
+        right: -10px;
+    }
+}
 
 ----------------
 
