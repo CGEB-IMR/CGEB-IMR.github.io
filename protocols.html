@@ -288,21 +288,37 @@
 			<script src="assets/js/main.js"></script>
 
 			<script>
-				// Check if card was previously closed in this session
-				if (sessionStorage.getItem('floatingCardClosed') === 'true') {
-					document.getElementById('floatingWrapper').style.display = 'none';
-				}
-
-				document.getElementById('closeFloating').addEventListener('click', (event) => {
-					event.preventDefault();
+				document.addEventListener('DOMContentLoaded', function () {
+					const floatingWrapper = document.getElementById('floatingWrapper');
+					const closeBtn = document.getElementById('closeFloating');
 					
-					// Hide the wrapper
-					document.getElementById('floatingWrapper').style.display = 'none';
+					// Get current page name (e.g., "pricing.html", "protocols.html", "submissions.html")
+					const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 					
-					// Store the closed state for this session
-					sessionStorage.setItem('floatingCardClosed', 'true');
+					// Check if this specific page was closed during this session
+					const closedPages = JSON.parse(sessionStorage.getItem('floatingCardClosedPages') || '[]');
+					
+					if (closedPages.includes(currentPage)) {
+						floatingWrapper.style.display = 'none';
+					}
+					
+					// Handle close button click
+					closeBtn.addEventListener('click', function(event) {
+						event.preventDefault();
+						event.stopPropagation(); // Prevent the link from opening
+						
+						// Hide the wrapper
+						floatingWrapper.style.display = 'none';
+						
+						// Add current page to the list of closed pages
+						const closedPages = JSON.parse(sessionStorage.getItem('floatingCardClosedPages') || '[]');
+						if (!closedPages.includes(currentPage)) {
+							closedPages.push(currentPage);
+							sessionStorage.setItem('floatingCardClosedPages', JSON.stringify(closedPages));
+						}
+					});
 				});
-			</script>
+				</script>
 
 	</body>
 </html>
